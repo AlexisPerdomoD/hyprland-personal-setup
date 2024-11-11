@@ -1,0 +1,44 @@
+[colors]
+[colors.primary]
+background = "#080808"  # Fondo oscuro similar al tema de Moonfly
+foreground = "#c6c8d1"  # Color claro para el texto principal (blanco grisáceo)
+
+[colors.search]
+matches = { foreground = "#080808", background = "#fe4450" }  # Rojo brillante para los resultados de búsqueda
+focused_match = { foreground = "#080808", background = "#72f1b8" }  # Verde brillante para coincidencias enfocadas
+
+[colors.hints]
+start = { foreground = "#080808", background = "#ffe347" }  # Amarillo brillante para el inicio del hint
+end = { foreground = "#080808", background = "#f39237" }    # Naranja (carrot) para el final del hint
+
+[colors.normal]
+black = "#2e2a4f"     # Negro oscuro
+red = "#fe4450"       # Rojo brillante
+green = "#72f1b8"     # Verde claro
+yellow = "#ffe347"    # Amarillo brillante
+blue = "#2ee2fa"      # Azul vibrante
+magenta = "#af125a"   # Magenta oscuro
+cyan = "#3bf4fb"      # Cian claro
+white = "#fbf9ff"     # Blanco claro
+
+[colors.bright]
+black = "#353163"     # Negro más claro para versiones brillantes
+red = "#f27059"       # Rojo (salmon) brillante
+green = "#297373"     # Verde más oscuro
+yellow = "#f39237"    # Naranja (carrot) brillante
+blue = "#848bbd"      # Azul grisáceo
+magenta = "#ff7edb"   # Magenta claro
+cyan = "#425367"      # Azul oscuro (diff mode)
+white = "#d7b49e"     # Blanco amarillento
+
+[colors.dim]
+black = "#1e1b2b"     # Negro más oscuro
+red = "#8e2a36"       # Rojo apagado
+green = "#518f77"     # Verde apagado
+yellow = "#b68e2a"    # Amarillo apagado
+blue = "#567896"      # Azul apagado
+magenta = "#7d4a5e"   # Magenta apagado
+cyan = "#2a828a"      # Cian apagado
+white = "#c8c8c8"     # Blanco apagado
+
+

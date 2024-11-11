@@ -1,0 +1,44 @@
+[colors]
+[colors.primary]
+background = "#1c1b29"  # Fondo más oscuro y neutro
+# background = "#262335"  # c.bg0 (raisin0)
+foreground = "#a2c7e5"  # c.fg (white_bluish)
+
+[colors.search]
+matches = { foreground = "#262335", background = "#425367" }  # c.diff_diff (diff mode)
+focused_match = { foreground = "#262335", background = "#243345" }  # c.diff_blue
+
+[colors.hints]
+start = { foreground = "#262335", background = "#ffe347" }  # c.yellow
+end = { foreground = "#262335", background = "#f39237" }  # c.carrot
+
+[colors.normal]
+black = "#2e2a4f"     # c.raisin1 (bg1)
+red = "#fe4450"       # c.red
+green = "#72f1b8"     # c.green_bright
+yellow = "#ffe347"    # c.yellow
+blue = "#2ee2fa"      # c.blue_bright
+magenta = "#af125a"   # c.purple
+cyan = "#3bf4fb"      # c.cyan
+white = "#fbf9ff"     # c.white
+
+[colors.bright]
+black = "#353163"     # c.raisin2 (visual)
+red = "#f27059"       # c.salmon
+green = "#297373"     # c.green_dark
+yellow = "#f39237"    # c.carrot
+blue = "#848bbd"      # c.gray
+magenta = "#ff7edb"   # c.pink
+cyan = "#425367"      # c.diff_diff
+white = "#d7b49e"     # c.sand
+
+[colors.dim]
+black = "#1e1b2b"     # Slightly darker version of raisin0
+red = "#8e2a36"       # Dimmed red
+green = "#518f77"     # Dimmed green_dark
+yellow = "#b68e2a"    # Dimmed carrot
+blue = "#567896"      # Dimmed blue_bright
+magenta = "#7d4a5e"   # Dimmed purple
+cyan = "#2a828a"      # Dimmed cyan
+white = "#c8c8c8"     # Dimmed white
+
