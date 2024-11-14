@@ -37,6 +37,7 @@ window#waybar.solo {
 
 #workspaces button:hover {
   color: rgba(217, 216, 216, 1);
+    background: rgba(20, 20, 20, 0);
 }
 
 #workspaces button.visible {
