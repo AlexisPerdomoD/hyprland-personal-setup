@@ -1,7 +1,7 @@
 window {
   margin: 0px;
-  border: 2px solid #928374;
-  background-color: #002b36;
+  border: 2px solid rgba(20, 20, 20, 1);
+  background-color: rgba(10, 10, 10, 1);
   border-radius: 4px;
   animation: none;
 }
@@ -9,19 +9,19 @@ window {
   margin: 5px;
   border: none;
   color: #839496;
-  background-color: #073642;
+  background-color: rgba(10, 10, 10, 1);
 }
 
 #inner-box {
   margin: 5px;
   border: none;
-  background-color: #002b36;
+  background-color: rgba(10, 10, 10, 1);
 }
 
 #outer-box {
   margin: 5px;
   border: none;
-  background-color: #002b36;
+  background-color: rgba(10, 10, 10, 0);
 }
 
 #scroll {
@@ -33,9 +33,10 @@ window {
   margin: 5px;
   font-family: "Iosevka";
   border: none;
-  color: #839496;
+  color: rgba(255, 255, 255, 1);
+
 }
 
 #entry:selected {
-  background-color: #073642;
+  background-color: rgba(10, 10, 10, 0.5);
 }
