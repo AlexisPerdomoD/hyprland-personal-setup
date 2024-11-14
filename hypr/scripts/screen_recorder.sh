@@ -1,4 +1,4 @@
-#!zsh
+#!/usr/bin/env zsh
 
 # Este script se encarga de grabar la pantalla en un archivo de vídeo utilizando slurp y wf-recorder.
 

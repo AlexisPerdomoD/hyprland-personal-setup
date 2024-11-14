@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env zsh
 # Matar el proceso de Waybar si está corriendo
 pkill waybar
 
