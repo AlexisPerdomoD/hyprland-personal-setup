@@ -2,8 +2,9 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 18, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+     "height": 24, // Waybar height (to be removed for auto height)
+    // "width": 2400, // Waybar width
+    "margin": 4, // Gaps between modules (4px)
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
@@ -18,26 +19,38 @@
         "pulseaudio",
         "network",
         "cpu",
+        "custom/cpu_temp",
+        "custom/gpu_temp",
         "memory",
-        //       "temperature",
         "custom/power"
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "<span style=\"italic\">{icon}</span>", //{name}: {icon}",
+        "format": "<sub>{icon}</sub>",
+        //"format": "<span>{id} <span style=\"italic\">{icon}</span></span>", //{name}: {icon}",
         "format-icons": {
             //"1": "",
             //"2": "",
             //"3": "",
             //"4": "", "activated": "",
             //"deactivated": ""
-            //"5": "", ""
+            //"5": "", // "", ""
             "urgent": "",
-            //"focused": "",
+            "focused": "",
             "default": "",
             "active": ""
+        },
+        "window-rewrite": {
+            "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+            "class<firefox>": "", // Windows whose classes are "firefox"
+            "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+            "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+            "code": "󰨞"
+        },
+        "persistent-workspaces": {
+            "*": 5
         }
     },
     "hyprland/window": {
@@ -56,7 +69,7 @@
         "format": "<small style=\"italic\">{}</small>"
     },
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "{:%B %d %Y   -   %R}",
         "format-alt": "{:%B %d %Y   -   %R}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -77,23 +90,20 @@
         }
     },
     "cpu": {
-        "format": "{usage}%  ",
+        "format": "CPU {usage}% ",
         "tooltip": true
     },
     "memory": {
-        "format": "{used}GB"
+        "format": "{used}GB RAM "
     },
     //"temperature": {
-    //    // "thermal-zone": 2,
-    //    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    //    "hwmon-path": [
+    //        "/sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/0000:0c:00.0/0000:0d:00.0/hwmon/hwmon0/temp1_input",
+    //        "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input"
+    //    ],
     //    "critical-threshold": 80,
     //    "format-critical": "{temperatureC}°C {icon}",
-    //    "format": "{temperatureC}°C {icon}",
-    //    "format-icons": [
-    //        "",
-    //        "",
-    //        ""
-    //    ]
+    //    "format": "GPU TEMP:{temperatureC}°C "
     //},
     ////"backlight": {
     //    // "device": "acpi_video1",
@@ -123,10 +133,10 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} {signalStrength}%  ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠ ",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
@@ -164,17 +174,26 @@
     //    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
     //    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     //},
+    "custom/cpu_temp": {
+        "exec": "cat /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input | awk '{print $1/1000 \"°C\"}' ",
+        "interval": 5,
+        "format": "CPU TEMP: {} "
+    },
+    "custom/gpu_temp": {
+        "exec": "cat /sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/0000:0c:00.0/0000:0d:00.0/hwmon/hwmon0/temp1_input | awk '{print $1/1000 \"°C\"}'",
+        "interval": 5,
+        "format": "GPU TEMP: {} "
+    },
     "custom/power": {
         "format": "⏻ ",
-        "tooltip": false,
-
- //       "menu": "on-click",
- ////       "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
- //       "menu-actions": {
- //           "shutdown": "shutdown",
- //           "reboot": "reboot",
- //           "suspend": "systemctl suspend",
- //           "hibernate": "systemctl hibernate"
- //       }
+        "tooltip": false
+        //       "menu": "on-click",
+        ////       "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        //       "menu-actions": {
+        //           "shutdown": "shutdown",
+        //           "reboot": "reboot",
+        //           "suspend": "systemctl suspend",
+        //           "hibernate": "systemctl hibernate"
+        //       }
     }
 }
