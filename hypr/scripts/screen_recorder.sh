@@ -20,12 +20,13 @@ if ! command -v wf-recorder &>/dev/null; then
 fi
 
 if [ -f /tmp/wf-recorder.pid ]; then
-    kill $(cat /tmp/wf-recorder.pid) && rm /tmp/wf-recorder.pid
+    kill $(cat /tmp/wf-recorder.pid)
+    rm /tmp/wf-recorder.pid
     notify-send -i dialog-information "Recording stopped" "Recording stopped. File properly saved."
 else
 
     output_file="$HOME/Videos/Screencasts/recording-$(date +%F_%T).mkv"
-
+    mkdir -p "$(dirname "$output_file")"
     slurp_output=$(slurp)
     if [ -n "$slurp_output" ]; then
         wf-recorder -g "$slurp_output" -f "$output_file" &
@@ -36,5 +37,11 @@ else
     fi
 fi
 
+sleep 300
+if [ -f /tmp/wf-recorder.pid ]; then
+    kill $(cat /tmp/wf-recorder.pid)
+    rm /tmp/wf-recorder.pid
+    notify-send -i dialog-information "Recording stopped" "Recording stopped. File properly saved."
+fi
 # Referencia para convertir mka a mp4:
 # ffmpeg -i recording-2024-10-24_16:25:29.mkv -codec copy demo-filtros.mp4
