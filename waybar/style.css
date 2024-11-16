@@ -1,15 +1,12 @@
 * {
   border: none;
-  border-radius: 0;
   font-family: Iosevka, monospace;
-  font-size: 13px;
-  box-shadow: none;
+  font-size: 10px;
   text-shadow: none;
   transition-duration: 0s;
 }
 #waybar {
   background: rgba(10, 10, 110, 0);
-  margin: 1px;
 }
 
 window#waybar {
@@ -24,20 +21,18 @@ window#waybar.solo {
 }
 
 #workspaces {
-  margin: 0 5px;
+  margin: 0 4px;
 }
 #window {
-  margin: 0 5px;
-  padding: 2px 5px;
 }
 #waybar {
-    border: 5px solid rgba(0, 0, 0, 0); /* Borde translúcido */
-    border-radius: 4px;  /* Esquinas redondeadas */
+  border: 5px solid rgba(0, 0, 0, 0); /* Borde translúcido */
+  border-radius: 4px; /* Esquinas redondeadas */
 }
 
 #workspaces button:hover {
   color: rgba(217, 216, 216, 1);
-    background: rgba(20, 20, 20, 0);
+  background: rgba(20, 20, 20, 0);
 }
 
 #workspaces button.visible {
@@ -70,7 +65,7 @@ workspaces button.focused {
   margin: 0 5px;
   min-width: 25px;
   /*   border: 2px solid rgba(217, 216, 216, 0.5); */
-  padding: 2px 5px;
+  padding: 0px 5px;
 }
 
 #clock {
