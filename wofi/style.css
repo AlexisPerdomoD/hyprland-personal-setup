@@ -1,6 +1,6 @@
 window {
   margin: 0px;
-  border: 2px solid rgba(20, 20, 20, 1);
+  border: 2px solid rgba(200, 200, 200, 1);
   background-color: rgba(10, 10, 10, 1);
   border-radius: 4px;
   animation: none;
@@ -8,7 +8,14 @@ window {
 #input {
   margin: 5px;
   border: none;
-  color: #839496;
+  color: rgba(200, 200, 200, 1);
+  background-color: rgba(10, 10, 10, 1);
+  outline: none;
+}
+#input:focus {
+  outline: none;
+  stroke-linecap: round;
+  color: rgba(200, 200, 200, 1);
   background-color: rgba(10, 10, 10, 1);
 }
 
@@ -21,22 +28,26 @@ window {
 #outer-box {
   margin: 5px;
   border: none;
-  background-color: rgba(10, 10, 10, 0);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(10, 10, 10, 1);
 }
 
 #scroll {
   margin: 0px;
   border: none;
+  background-color: rgba(10, 10, 10, 1);
 }
 
 #text {
   margin: 5px;
+  font-size: 11px;
   font-family: "Iosevka";
+  font-weight: bold;
   border: none;
-  color: rgba(255, 255, 255, 1);
-
+  color: rgba(200, 200, 200, 1);
 }
 
 #entry:selected {
-  background-color: rgba(10, 10, 10, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
 }
