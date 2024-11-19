@@ -350,7 +350,7 @@ default_mode "locked"
 
 // The folder in which Zellij will look for themes
 //
-theme_dir "/home/six66/.config/zellij/themes"
+theme_dir "./themes"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
