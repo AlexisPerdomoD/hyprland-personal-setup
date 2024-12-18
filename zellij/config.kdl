@@ -274,6 +274,33 @@ themes {
          black 0 0 0
          white 255 255 255
      }
+    kanagawa_dragon {
+        fg "#dcdccc"
+        bg "#1a1a1a"
+        red "#C34043"
+        green "#728F66"
+        yellow "#9D8F6F"
+        blue "#8BA4B0"
+        magenta "#ff79c6"
+        cyan "#8be9fd"
+        orange "#ffb86c"
+        black "#282828"
+        white "#8D908D"
+    } 
+
+    everforest {
+        fg "#d3c6aa"
+        bg "#282828"
+        red "#e67e80"
+        green "#a7c080"
+        yellow "#dbbc7f"
+        blue "#7fbbb3"
+        magenta "#d699b6"
+        cyan "#83c092"
+        orange "#e69875"
+        black "#1a1a1a"
+        white "#8D908D"
+    }
  }
 
 // Choose the theme that is specified in the themes section.
@@ -350,7 +377,7 @@ default_mode "locked"
 
 // The folder in which Zellij will look for themes
 //
-theme_dir "./themes"
+// theme_dir "./themes"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
