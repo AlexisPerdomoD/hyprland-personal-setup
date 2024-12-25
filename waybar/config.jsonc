@@ -164,7 +164,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol-qt"
     },
     //"custom/media": {
     //    "format": "{icon} {text}",
