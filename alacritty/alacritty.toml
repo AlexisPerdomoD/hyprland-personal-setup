@@ -141,7 +141,7 @@
 dynamic_title = true 
 decorations_theme_variant = "Dark"
 decorations = "None"
-opacity = 0.9
+opacity = 0.85
 # blur = true 
 dimensions = { columns = 180, lines = 35 }
 padding = { x = 8, y = 5 }
@@ -200,7 +200,7 @@ multiplier = 3
 
 [font]
 # normal = { family = "SourceCodeVF", style = "Medium" }
-normal = { family = "AgaveNerdFont" }
+normal = { family = "Iosevka Nerd Font" , style = "Bold"}
 # normal  = {family = "Bedstead"}
 # normal = { family = "LeagueMono" }
 size = 10
@@ -293,9 +293,8 @@ save_to_clipboard = true
 [cursor]
 style = { shape = "Block", blinking = "On" }
 unfocused_hollow = true
-thickness = 0.2
-
-
+thickness = 0.25
+blink_interval = 500
 # TERMINAL
 # This section documents the [terminal] table of the configuration file.
 # osc52 = "Disabled" | "OnlyCopy" | "OnlyPaste" | "CopyPaste"
@@ -746,9 +745,7 @@ live_config_reload = true
 # Example:
 
 # import = [
-# "~/.config/alacritty/base16-dark.toml",
-# "~/.config/alacritty/keybindings.toml",
-import = ["~/.config/alacritty/themes/index.toml"]
+import = ["~/repos/alacritty-themes/themes/terminal_app.toml"]
 
 [terminal]
 
