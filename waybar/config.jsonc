@@ -1,0 +1,171 @@
+// -*- mode: jsonc -*r
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 16, // Waybar height (to be removed for auto height)
+    // "width": 2400, // Waybar width
+    //"margin": 4, // Gaps between modules (4px)
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "keyboard-state",
+        "custom/brightness",
+        "clock",
+        "hyprland/submap"
+    ],
+    "modules-right": [
+        "bluetooth",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "custom/cpu_temp",
+        "memory",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        //"format": "<sub>{icon}</sub>",
+        "format": "<span>{id} <span style=\"italic\">{icon}</span></span>", //{name}: {icon}",
+        "format-icons": {
+            //"1": "",
+            //"2": "",
+            //"3": "",
+            //"4": "", "activated": "",
+            "deactivated": "",
+            //"5": "", // "", ""
+            "urgent": "",
+            "focused": "",
+            "default": "",
+            "active": ""
+        },
+        "window-rewrite": {
+            "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+            "class<firefox>": "", // Windows whose classes are "firefox"
+            "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+            "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+            "code": "󰨞"
+        },
+        "persistent-workspaces": {
+            "*": 3
+        }
+    },
+    "hyprland/window": {
+        "format": "<span  size=\"small\">{}</span> "
+    },
+    "hyprland/submap": {
+        "format": "✌️ {}",
+        "max-length": 8,
+        "tooltip": false
+    },
+    "keyboard-state": {
+        "numlock": false,
+        "capslock": true,
+        "format": {
+            "capslock": "{icon}"
+        },
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "clock": {
+        "format": "{:%B %d %Y   -   %R}",
+        "format-alt": "{:%B %d %Y   -   %R}",
+        "tooltip": false
+    },
+    //ddccontrol version
+    "custom/brightness": {
+        "format": "{icon} {percentage}%",
+        "format-icons": [
+            "\uDB80\uDCDE",
+            "\uDB80\uDCDF",
+            "\uDB80\uDCE0"
+        ],
+        "return-type": "json",
+        "exec-on-event": false,
+        "exec": "ddccontrol -r 0x10 dev:/dev/i2c-8 | grep Control | sed -En 's/.*\\/([0-9]+)\\/.*/\\1/p' | { read x; echo '{\"percentage\":'${x}'}'; }",
+        "on-scroll-up": "ddccontrol -r 0x10 -W +10 dev:/dev/i2c-8",
+        "on-scroll-down": "ddccontrol -r 0x10 -W -10 dev:/dev/i2c-8",
+        "on-click": "ddccontrol -r 0x10 -w 0 dev:/dev/i2c-8",
+        "on-click-right": "ddccontrol -r 0x10 -w 100 dev:/dev/i2c-8",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "CPU {usage}% ",
+        "tooltip": true
+    },
+    "memory": {
+        "format": "{used}GB RAM ",
+        "tooltip": false
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address} |",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueman-manager"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} {signalStrength}%  ",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume} % {icon}   {format_source}",
+        "format-bluetooth": "{volume} % {icon}    {format_source}",
+        "format-bluetooth-muted": " {icon}   {format_source}",
+        "format-muted": "   {format_source}",
+        "format-source": "{volume} % ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "killall pavucontrol-qt;pavucontrol-qt"
+    },
+    "custom/cpu_temp": {
+        "exec": "cat /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input | awk '{print int($1/1000) \"°C\"}' ",
+        "interval": 5,
+        "format": "CPU TEMP: {} ",
+        "tooltip": false
+    },
+    "custom/gpu_temp": {
+        "exec": "cat /sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/0000:0c:00.0/0000:0d:00.0/hwmon/hwmon0/temp1_input | awk '{print $1/1000 \"°C\"}'",
+        "interval": 5,
+        "format": "GPU TEMP: {} ",
+        "tooltip": false
+    },
+    "custom/power": {
+        "format": "⏻ ",
+        "tooltip": false,
+        "on-click": "wlogout &"
+    }
+}

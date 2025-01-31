@@ -1,0 +1,122 @@
+@import "colors.css";
+
+* {
+  border: none;
+  font-family: "GohuFont 11 Nerd Font Mono", monospace;
+  font-weight: bold;
+  font-size: 12px;
+  text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
+}
+
+#waybar {
+  background-color: @background;
+  border-radius: 4px;
+  color: @foreground;
+}
+
+#workspaces {
+  margin: 0 4px;
+}
+
+#window {
+}
+
+#workspaces {
+  border: none;
+  padding: 0px 6px;
+  border-radius: 16px;
+}
+
+#workspaces button {
+  color: @color10;
+}
+#workspaces button:hover {
+  color: @color12;
+  background: rgba(20, 20, 20, 0);
+  border: none;
+}
+
+#workspaces button.visible {
+  color: @foreground;
+}
+
+#workspaces button.urgent {
+  color: rgba(238, 46, 36, 1);
+}
+
+#bluetooth,
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#custom-storage,
+#custom-spotify,
+#custom-weather,
+#custom-power,
+#custom-cpu_temp,
+#keyboard-state,
+#custom-gpu_temp {
+  margin: 0 5px;
+  min-width: 25px;
+  /*   border: 2px solid rgba(217, 216, 216, 0.5); */
+  padding: 0px 5px;
+}
+
+#bluetooth:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#custom-cpu_temp:hover,
+#custom-gpu_temp:hover,
+#clock:hover,
+#pulseaudio:hover {
+  color: @color10;
+}
+
+#clock {
+  margin: 0px 5px;
+  min-width: 140px;
+}
+
+#battery.warning {
+  color: rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+  color: rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+  color: rgba(217, 216, 216, 1);
+}
+
+#custom-storage.warning {
+  color: rgba(255, 210, 4, 1);
+}
+
+#custom-storage.critical {
+  color: rgba(238, 46, 36, 1);
+}
+
+#custom-power {
+  color: rgba(110, 10, 10, 1);
+}
+#custom-power:hover {
+  color: rgba(200, 10, 10, 1);
+}
+#keyboard-state label.locked {
+  color: @color10;
+}
+#submap {
+  font-weight: bolder;
+  font-size: 16;
+  margin: 0 5px;
+  min-width: 25px;
+  padding: 0px 15px;
+  color: @color4;
+  background-color: @color10;
+}
