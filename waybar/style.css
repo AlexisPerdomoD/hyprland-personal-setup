@@ -2,11 +2,12 @@
 
 * {
   border: none;
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family: "GohuFont 11 Nerd Font Mono", monospace;
   font-weight: bold;
   font-size: 12px;
   text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
 }
+
 #waybar {
   background-color: @background;
   border-radius: 4px;
@@ -15,6 +16,9 @@
 
 #workspaces {
   margin: 0 4px;
+}
+
+#window {
 }
 
 #workspaces {
@@ -58,8 +62,10 @@
 #custom-gpu_temp {
   margin: 0 5px;
   min-width: 25px;
+  /*   border: 2px solid rgba(217, 216, 216, 0.5); */
   padding: 0px 5px;
 }
+
 #bluetooth:hover,
 #cpu:hover,
 #memory:hover,
@@ -95,6 +101,7 @@
 #custom-storage.critical {
   color: rgba(238, 46, 36, 1);
 }
+
 #custom-power {
   color: rgba(110, 10, 10, 1);
 }

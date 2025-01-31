@@ -201,11 +201,11 @@ multiplier = 3
 [font]
 # normal = { family = "SourceCodeVF", style = "Medium" }
 # normal = { family = "Iosevka Nerd Font" , style = "Bold"}
-# normal  = {family = "ProFont Windows Nerd Font"}
-normal = {family = "SpaceMono Nerd Font"}
+normal  = {family = "ProFont Windows Nerd Font"}
+# normal = {family = "SpaceMono Nerd Font"}
 # normal  = {family = "Bedstead"}
 # normal = { family = "LeagueMono" }
-size = 10
+size = 14
 # builtin_box_drawing = true 
 # enable_ligatures = true
 # COLORS
