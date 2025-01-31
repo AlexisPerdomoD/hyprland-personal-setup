@@ -2,12 +2,13 @@
 
 * {
   border: none;
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family:  "GohuFont 11 Nerd Font Mono", monospace;
   font-weight: bold;
   font-size: 12px;
   text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
   transition-duration: 0s;
 }
+
 #waybar {
   opacity: 0.9;
   background: @background;
@@ -17,10 +18,11 @@
 }
 
 #workspaces {
-  margin: 0 4px;
+    margin: 0 4px;
 }
-#window {
-}
+
+#window {}
+
 #waybar {
 }
 #workspaces {
@@ -46,7 +48,7 @@ workspaces button.focused {
 }
 
 #workspaces button.urgent {
-  color: rgba(238, 46, 36, 1);
+    color: rgba(238, 46, 36, 1);
 }
 
 #bluetooth,
@@ -64,11 +66,12 @@ workspaces button.focused {
 #custom-power,
 #custom-cpu_temp,
 #custom-gpu_temp {
-  margin: 0 5px;
-  min-width: 25px;
-  /*   border: 2px solid rgba(217, 216, 216, 0.5); */
-  padding: 0px 5px;
+    margin: 0 5px;
+    min-width: 25px;
+    /*   border: 2px solid rgba(217, 216, 216, 0.5); */
+    padding: 0px 5px;
 }
+
 #bluetooth:hover,
 #cpu:hover,
 #memory:hover,
@@ -77,35 +80,40 @@ workspaces button.focused {
 #custom-gpu_temp:hover,
 #clock:hover,
 #pulseaudio:hover {
+<<<<<<< HEAD
   color: @color10;
+=======
+    color: rgba(146, 146, 146, 1);
+>>>>>>> 37be336 (first commit)
 }
 
 #clock {
-  margin: 0px 5px;
-  min-width: 140px;
+    margin: 0px 5px;
+    min-width: 140px;
 }
 
 #battery.warning {
-  color: rgba(255, 210, 4, 1);
+    color: rgba(255, 210, 4, 1);
 }
 
 #battery.critical {
-  color: rgba(238, 46, 36, 1);
+    color: rgba(238, 46, 36, 1);
 }
 
 #battery.charging {
-  color: rgba(217, 216, 216, 1);
+    color: rgba(217, 216, 216, 1);
 }
 
 #custom-storage.warning {
-  color: rgba(255, 210, 4, 1);
+    color: rgba(255, 210, 4, 1);
 }
 
 #custom-storage.critical {
-  color: rgba(238, 46, 36, 1);
+    color: rgba(238, 46, 36, 1);
 }
+
 #custom-power {
-  color: rgba(110, 10, 10, 1);
+    color: rgba(110, 10, 10, 1);
 }
 #custom-power:hover {
   color: rgba(200, 10, 10, 1);
