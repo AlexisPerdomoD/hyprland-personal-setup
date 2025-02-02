@@ -2,7 +2,7 @@
 {
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 16, // Waybar height (to be removed for auto height)
+    "height": 24, // Waybar height (to be removed for auto height)
     // "width": 2400, // Waybar width
     //"margin": 4, // Gaps between modules (4px)
     "margin-bottom": 0,
@@ -16,17 +16,19 @@
         "hyprland/window",
         "keyboard-state"
     ],
-    "modules-center": [
-        "clock"
-    ],
+    //"modules-center": [
+    //
+    //],
     "modules-right": [
+        "clock",
         "bluetooth",
         "pulseaudio",
         "network",
         "cpu",
         "custom/cpu_temp",
-        "custom/gpu_temp",
+        //"custom/gpu_temp",
         "memory",
+        "battery",
         "custom/power"
     ],
     "hyprland/workspaces": {
@@ -100,6 +102,42 @@
     },
     "memory": {
         "format": "{used}GB RAM "
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%", // Icono de carga
+        "format-plugged": "󱘖 {capacity}%", // Icono conectado
+        "format-alt": "{time} {icon}",
+        "format-icons": {
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂"
+            ],
+            "charging": [
+                "󰢜",
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊"
+            ]
+        },
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": false,
+        "interval": 10
     },
     //"temperature": {
     //    "hwmon-path": [
@@ -181,15 +219,15 @@
     //    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     //},
     "custom/cpu_temp": {
-        "exec": "cat /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input | awk '{print $1/1000 \"°C\"}' ",
+        "exec": "cat /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input | awk '{print $1/1000 \"°C\"}'",
         "interval": 5,
         "format": "CPU TEMP: {} "
     },
-    "custom/gpu_temp": {
-        "exec": "cat /sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/0000:0c:00.0/0000:0d:00.0/hwmon/hwmon0/temp1_input | awk '{print $1/1000 \"°C\"}'",
-        "interval": 5,
-        "format": "GPU TEMP: {} "
-    },
+    //"custom/gpu_temp": {
+    //    "exec": "cat /sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/0000:0c:00.0/0000:0d:00.0/hwmon/hwmon0/temp1_input | awk '{print $1/1000 \"°C\"}'",
+    //    "interval": 5,
+    //    "format": "GPU TEMP: {} "
+    //},
     "custom/power": {
         "format": "⏻ ",
         "tooltip": false,
