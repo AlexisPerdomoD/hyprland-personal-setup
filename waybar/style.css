@@ -1,7 +1,7 @@
 * {
   border: none;
-  font-family: Iosevka, monospace;
-  font-size: 10px;
+  font-family: "GohuFont 11 Nerd Font Mono", monospace;
+  font-size: 11px;
   text-shadow: none;
   transition-duration: 0s;
 }
@@ -41,8 +41,7 @@ window#waybar.solo {
 }
 
 workspaces button.focused {
-  border-top: 3px solid rgba(217, 216, 216, 1);
-  border-bottom: 3px solid rgba(217, 216, 216, 0);
+  border: 3px solid rgba(217, 216, 216, 1);
 }
 
 #workspaces button.urgent {
@@ -61,11 +60,23 @@ workspaces button.focused {
 #custom-storage,
 #custom-spotify,
 #custom-weather,
-#custom-power {
+#custom-power,
+#custom-cpu_temp,
+#custom-gpu_temp {
   margin: 0 5px;
   min-width: 25px;
   /*   border: 2px solid rgba(217, 216, 216, 0.5); */
   padding: 0px 5px;
+}
+#bluetooth:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#custom-cpu_temp:hover,
+#custom-gpu_temp:hover,
+#clock:hover,
+#pulseaudio:hover {
+  color: rgba(146, 146, 146, 1);
 }
 
 #clock {
