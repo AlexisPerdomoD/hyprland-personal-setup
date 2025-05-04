@@ -202,7 +202,7 @@ multiplier = 3
 # normal = { family = "SourceCodeVF", style = "Medium" }
 # normal = { family = "Iosevka Nerd Font" , style = "Bold"}
 # normal  = {family = "ProFont Windows Nerd Font"}
-normal = {family = "FantasqueSansM Nerd Font"}
+normal = {family = "SpaceMono Nerd Font"}
 # normal  = {family = "Bedstead"}
 # normal = { family = "LeagueMono" }
 size = 10
