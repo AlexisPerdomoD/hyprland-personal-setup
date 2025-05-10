@@ -1,23 +1,14 @@
 * {
   border: none;
-  font-family: "GohuFont 11 Nerd Font Mono", monospace;
-  font-size: 11px;
-  text-shadow: none;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-weight: bold;
+  font-size: 12px;
+  text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
   transition-duration: 0s;
 }
 #waybar {
-  background: rgba(10, 10, 110, 0);
-}
-
-window#waybar {
-  color: rgba(217, 216, 216, 1);
-  background: rgba(10, 10, 10, 1);
-}
-
-window#waybar.solo {
-  color: rgba(217, 216, 216, 1);
-  font-weight: bolder;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
 }
 
 #workspaces {
@@ -27,12 +18,14 @@ window#waybar.solo {
 }
 #waybar {
   border: 5px solid rgba(0, 0, 0, 0); /* Borde translúcido */
-  border-radius: 4px; /* Esquinas redondeadas */
 }
-
+#workspaces {
+  border: none;
+}
 #workspaces button:hover {
   color: rgba(217, 216, 216, 1);
   background: rgba(20, 20, 20, 0);
+  border: none;
 }
 
 #workspaces button.visible {
@@ -41,7 +34,6 @@ window#waybar.solo {
 }
 
 workspaces button.focused {
-  border: 3px solid rgba(217, 216, 216, 1);
 }
 
 #workspaces button.urgent {
@@ -76,7 +68,7 @@ workspaces button.focused {
 #custom-gpu_temp:hover,
 #clock:hover,
 #pulseaudio:hover {
-  color: rgba(146, 146, 146, 1);
+  color: rgba(126, 126, 126, 1);
 }
 
 #clock {
@@ -105,4 +97,7 @@ workspaces button.focused {
 }
 #custom-power {
   color: rgba(110, 10, 10, 1);
+}
+#custom-power:hover {
+  color: rgba(200, 10, 10, 1);
 }

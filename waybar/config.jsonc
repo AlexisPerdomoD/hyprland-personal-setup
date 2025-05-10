@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
-     "layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-     "height": 24, // Waybar height (to be removed for auto height)
+    "height": 16, // Waybar height (to be removed for auto height)
     // "width": 2400, // Waybar width
     //"margin": 4, // Gaps between modules (4px)
     "margin-bottom": 0,
@@ -13,7 +13,8 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/window",
+        "keyboard-state"
     ],
     "modules-center": [
         "clock"
@@ -39,12 +40,12 @@
             //"2": "",
             //"3": "",
             //"4": "", "activated": "",
-            //"deactivated": ""
+            "deactivated": "",
             //"5": "", // "", ""
             "urgent": "",
             "focused": "",
-            "default": "",
-            "active": ""
+            "default": "",
+            "active": ""
         },
         "window-rewrite": {
             "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
@@ -54,7 +55,7 @@
             "code": "󰨞"
         },
         "persistent-workspaces": {
-            "*": 5
+            "*": 1
         }
     },
     "hyprland/window": {
@@ -146,10 +147,10 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume} % {icon} {format_source}",
-        "format-bluetooth": "{volume} % {icon}  {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format": "{volume} % {icon}   {format_source}",
+        "format-bluetooth": "{volume} % {icon}    {format_source}",
+        "format-bluetooth-muted": " {icon}   {format_source}",
+        "format-muted": "   {format_source}",
         "format-source": "{volume} % ",
         "format-source-muted": " ",
         "format-icons": {
@@ -165,7 +166,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol-qt"
+        "on-click": "killall pavucontrol-qt;pavucontrol-qt"
     },
     //"custom/media": {
     //    "format": "{icon} {text}",
@@ -191,7 +192,8 @@
     },
     "custom/power": {
         "format": "⏻ ",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "wlogout &"
         //       "menu": "on-click",
         ////       "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
         //       "menu-actions": {
