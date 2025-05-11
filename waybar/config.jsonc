@@ -55,7 +55,7 @@
             "code": "󰨞"
         },
         "persistent-workspaces": {
-            "*": 1
+            "*": 3
         }
     },
     "hyprland/window": {

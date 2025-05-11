@@ -747,7 +747,7 @@ live_config_reload = true
 # Example:
 
 # import = [
-import = ["~/repos/alacritty-themes/themes/terminal_app.toml"]
+import = ["~/.cache/wal/colors-alacritty.toml"]
 
 [terminal]
 

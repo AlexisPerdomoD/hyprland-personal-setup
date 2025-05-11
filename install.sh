@@ -1,13 +1,9 @@
-sudo pacman -S --needed --noconfirm hyprland hyprpaper hyprshot wlogout mako waybar wofi alacritty gtk-3.0 gtk-4.0 slurp wf-recorder zellij
+#!/bin/env bash
 
-rm -rf ~/.config/hypr
-rm -rf ~/.config/mako
-rm -rf ~/.config/waybar
-rm -rf ~/.config/wofi
-rm -rf ~/.config/zellij
+yay -S --needed --noconfirm hyprland hyprpaper hyprshot python-pywal16 wlogout mako waybar wofi alacritty gtk-3.0 gtk-4.0 slurp wf-recorder zellij
 
-ln -s ./hypr ~/.config/hypr
-ln -s ./mako ~/.config/mako
-ln -s ./waybar ~/.config/waybar
-ln -s ./wofi ~/.config/wofi
-ln -s ./zellij ~/.config/zellij
+ln -sf ./hypr ~/.config/hypr
+ln -sf ./mako ~/.config/mako
+ln -sf ./waybar ~/.config/waybar
+ln -sf ./wofi ~/.config/wofi
+ln -sf ./zellij ~/.config/zellij
