@@ -48,12 +48,15 @@ if [[ $NEXT_WALLPAPER_POSITION == 0 ]]; then
 fi
 
 WALLPAPER="${WALLPAPERS[$NEXT_WALLPAPER_POSITION]}"
-echo "$WALLPAPER" >"$HISTORY_FILE"
 
-hyprctl hyprpaper preload $WALLPAPER &&
+echo "$WALLPAPER" >"$HISTORY_FILE" &&
+    hyprctl hyprpaper preload $WALLPAPER &&
     hyprctl hyprpaper wallpaper " ,$WALLPAPER" &&
-    wal -i $WALLPAPER &&
-    ln -sf "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/waybar/colors.css" &&
-    ln -sf "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wofi/colors.css"
+    wal -i $WALLPAPER ||
+    exit 1
+
+ln -sf "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/waybar/colors.css"
+ln -sf "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wofi/colors.css"
+ln -sf "$HOME/.cache/wal/colors-mako" "$HOME/.config/mako/colors"
 
 # Unomment below if using `swww` for smooth transitions

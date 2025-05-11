@@ -1,3 +1,4 @@
+include=~/.config/mako/colors
 # Take a look at the mako manpage with the command:
 #   man 5 mako
 # To view all configuration options.
@@ -8,13 +9,11 @@ sort=-time
 # output=DP-2
 layer=overlay
 anchor=top-center
-background-color=#101010
 # width=300
 # height=110
 margin=5
 padding=0,5,10
 border-size=2
-border-color=#909090
 border-radius=8
 # icons=0
 max-icon-size=64
