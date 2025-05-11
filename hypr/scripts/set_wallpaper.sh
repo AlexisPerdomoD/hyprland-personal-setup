@@ -2,7 +2,7 @@
 # changes wallpaper from a list of images in $WALLPAPER_DIR abd updates avalible colors for services
 
 timeout=30
-while ! pgrep -x hyprpaper >/dev/null; do
+while ! (pgrep -x hyprpaper >/dev/null && hyprctl monitors >/dev/null); do
     if [[ $timeout -eq 0 ]]; then
         notify-send "hyprpaper not running"
         exit 1
