@@ -30,16 +30,16 @@
 }
 
 #workspaces button {
-  color: @foreground;
+  color: @color10;
 }
 #workspaces button:hover {
-  color: @color10;
+  color: @color12;
   background: rgba(20, 20, 20, 0);
   border: none;
 }
 
 #workspaces button.visible {
-  color: @color10;
+  color: @foreground;
 }
 
 workspaces button.focused {

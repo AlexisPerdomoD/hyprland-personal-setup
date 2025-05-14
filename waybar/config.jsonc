@@ -44,7 +44,7 @@
             //"5": "", // "", ""
             "urgent": "",
             "focused": "",
-            "default": "",
+            "default": "",
             "active": ""
         },
         "window-rewrite": {
