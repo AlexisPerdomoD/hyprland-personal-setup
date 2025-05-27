@@ -80,11 +80,7 @@ workspaces button.focused {
 #custom-gpu_temp:hover,
 #clock:hover,
 #pulseaudio:hover {
-<<<<<<< HEAD
   color: @color10;
-=======
-    color: rgba(146, 146, 146, 1);
->>>>>>> 37be336 (first commit)
 }
 
 #clock {
