@@ -1,0 +1,61 @@
+@import url("/home/cuji/.cache/wal/colors-waybar.css");
+
+* {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+window {
+  margin: 0px;
+  border: 2px solid @color8;
+  background-color: @background;
+
+  animation: none;
+}
+#input {
+  font-size: 20px;
+  margin: 5px;
+  border: none;
+  color: @foreground;
+  background-color: @background;
+}
+#input:focus {
+  outline: none;
+  stroke-linecap: round;
+  color: @color8;
+  background-color: @background;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: @background;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+  color: @foreground;
+  background-color: @background;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+  background-color: @background;
+}
+
+#text {
+  margin: 5px;
+  font-size: 20px;
+  font-family: "FantasqueSansM Nerd Font";
+  font-weight: bold;
+  border: none;
+  color: @foreground;
+}
+
+#entry:selected {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
