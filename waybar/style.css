@@ -4,7 +4,7 @@
   border: none;
   font-family: "GohuFont 11 Nerd Font Mono", monospace;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 16px;
   text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
 }
 
@@ -18,9 +18,6 @@
   margin: 0 4px;
 }
 
-#window {
-}
-
 #workspaces {
   border: none;
   padding: 0px 6px;
@@ -30,6 +27,7 @@
 #workspaces button {
   color: @color10;
 }
+
 #workspaces button:hover {
   color: @color12;
   background: rgba(20, 20, 20, 0);
@@ -38,6 +36,9 @@
 
 #workspaces button.visible {
   color: @foreground;
+}
+
+#workspaces button.focused {
 }
 
 #workspaces button.urgent {
@@ -105,6 +106,7 @@
 #custom-power {
   color: rgba(110, 10, 10, 1);
 }
+
 #custom-power:hover {
   color: rgba(200, 10, 10, 1);
 }
