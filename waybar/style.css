@@ -1,20 +1,20 @@
 @import "colors.css";
 
 * {
-  border: none;
-  font-family:  "GohuFont 11 Nerd Font Mono", monospace;
-  font-weight: bold;
-  font-size: 12px;
-  text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
-  transition-duration: 0s;
+    border: none;
+    font-family: "GohuFont 11 Nerd Font Mono", monospace;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(20, 20, 20, 1);
+    transition-duration: 0s;
 }
 
 #waybar {
-  opacity: 0.9;
-  background: @background;
+    opacity: 0.9;
+    background: @background;
 
-  border-radius: 4px;
-  color: @foreground;
+    border-radius: 4px;
+    color: @foreground;
 }
 
 #workspaces {
@@ -23,29 +23,27 @@
 
 #window {}
 
-#waybar {
-}
 #workspaces {
-  border: none;
-  padding: 0px 6px;
-  border-radius: 16px;
+    border: none;
+    padding: 0px 6px;
+    border-radius: 16px;
 }
 
 #workspaces button {
-  color: @color10;
+    color: @color10;
 }
+
 #workspaces button:hover {
-  color: @color12;
-  background: rgba(20, 20, 20, 0);
-  border: none;
+    color: @color12;
+    background: rgba(20, 20, 20, 0);
+    border: none;
 }
 
 #workspaces button.visible {
-  color: @foreground;
+    color: @foreground;
 }
 
-workspaces button.focused {
-}
+workspaces button.focused {}
 
 #workspaces button.urgent {
     color: rgba(238, 46, 36, 1);
@@ -80,7 +78,7 @@ workspaces button.focused {
 #custom-gpu_temp:hover,
 #clock:hover,
 #pulseaudio:hover {
-  color: @color10;
+    color: @color10;
 }
 
 #clock {
@@ -111,6 +109,7 @@ workspaces button.focused {
 #custom-power {
     color: rgba(110, 10, 10, 1);
 }
+
 #custom-power:hover {
-  color: rgba(200, 10, 10, 1);
+    color: rgba(200, 10, 10, 1);
 }
