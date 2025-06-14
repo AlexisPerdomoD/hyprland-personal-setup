@@ -1,7 +1,7 @@
 #!/bin/env zsh
 # changes wallpaper from a list of images in $WALLPAPER_DIR abd updates avalible colors for services
 
-timeout=30
+timeout=60
 while ! (pgrep -x hyprpaper >/dev/null && hyprctl monitors >/dev/null); do
     if [[ $timeout -eq 0 ]]; then
         notify-send "hyprpaper not running"
@@ -58,5 +58,3 @@ echo "$WALLPAPER" >"$HISTORY_FILE" &&
 ln -sf "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/waybar/colors.css"
 ln -sf "$HOME/.cache/wal/colors-waybar.css" "$HOME/.config/wofi/colors.css"
 ln -sf "$HOME/.cache/wal/colors-mako" "$HOME/.config/mako/colors"
-
-# Unomment below if using `swww` for smooth transitions

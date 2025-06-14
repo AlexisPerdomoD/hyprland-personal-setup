@@ -1,4 +1,4 @@
-// -*- mode: jsonc -*-
+// -*- mode: jsonc -*r
 {
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
@@ -12,12 +12,14 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "keyboard-state",
         "hyprland/workspaces",
-        "hyprland/window",
-        "keyboard-state"
+        "hyprland/window"
     ],
     "modules-center": [
-        "clock"
+        "custom/brightness",
+        "clock",
+        "hyprland/submap"
     ],
     "modules-right": [
         "bluetooth",
@@ -25,12 +27,11 @@
         "network",
         "cpu",
         "custom/cpu_temp",
-        "custom/gpu_temp",
         "memory",
         "custom/power"
     ],
     "hyprland/workspaces": {
-        "disable-scroll": true,
+        "disable-scroll": false,
         "all-outputs": true,
         "warp-on-scroll": false,
         //"format": "<sub>{icon}</sub>",
@@ -61,6 +62,11 @@
     "hyprland/window": {
         "format": "<span  size=\"small\">{}</span> "
     },
+    "hyprland/submap": {
+        "format": "✌️ {}",
+        "max-length": 8,
+        "tooltip": false
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -70,61 +76,36 @@
             "unlocked": ""
         }
     },
-    "hyprland/mode": {
-        "format": "<small style=\"italic\">{}</small>"
-    },
     "clock": {
         "format": "{:%B %d %Y   -   %R}",
         "format-alt": "{:%B %d %Y   -   %R}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "mode"
-        }
+        "tooltip": false
+    },
+    //ddccontrol version
+    "custom/brightness": {
+        "format": "{icon} {percentage}%",
+        "format-icons": [
+            "\uDB80\uDCDE",
+            "\uDB80\uDCDF",
+            "\uDB80\uDCE0"
+        ],
+        "return-type": "json",
+        "exec-on-event": false,
+        "exec": "ddccontrol -r 0x10 dev:/dev/i2c-8 | grep Control | sed -En 's/.*\\/([0-9]+)\\/.*/\\1/p' | { read x; echo '{\"percentage\":'${x}'}'; }",
+        "on-scroll-up": "ddccontrol -r 0x10 -W +10 dev:/dev/i2c-8",
+        "on-scroll-down": "ddccontrol -r 0x10 -W -10 dev:/dev/i2c-8",
+        "on-click": "ddccontrol -r 0x10 -w 0 dev:/dev/i2c-8",
+        "on-click-right": "ddccontrol -r 0x10 -w 100 dev:/dev/i2c-8",
+        "interval": 1
     },
     "cpu": {
         "format": "CPU {usage}% ",
         "tooltip": true
     },
     "memory": {
-        "format": "{used}GB RAM "
+        "format": "{used}GB RAM ",
+        "tooltip": false
     },
-    //"temperature": {
-    //    "hwmon-path": [
-    //        "/sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/0000:0c:00.0/0000:0d:00.0/hwmon/hwmon0/temp1_input",
-    //        "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input"
-    //    ],
-    //    "critical-threshold": 80,
-    //    "format-critical": "{temperatureC}°C {icon}",
-    //    "format": "GPU TEMP:{temperatureC}°C "
-    //},
-    ////"backlight": {
-    //    // "device": "acpi_video1",
-    //    "format": "{percent}% {icon}",
-    //    "format-icons": [
-    //        "",
-    //        "",
-    //        "",
-    //        "",
-    //        "",  
-    //        "",
-    //        "",
-    //        "",
-    //        ""
-    //    ]
-    //},
     "bluetooth": {
         "format": " {status}",
         "format-connected": " {device_alias}",
@@ -168,39 +149,21 @@
         },
         "on-click": "killall pavucontrol-qt;pavucontrol-qt"
     },
-    //"custom/media": {
-    //    "format": "{icon} {text}",
-    //    "return-type": "json",
-    //    "max-length": 40,
-    //    "format-icons": {
-    //        "spotify": "",
-    //        "default": "🎜"
-    //    },
-    //    "escape": true,
-    //    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    //    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    //},
     "custom/cpu_temp": {
-        "exec": "cat /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input | awk '{print $1/1000 \"°C\"}' ",
+        "exec": "cat /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input | awk '{print int($1/1000) \"°C\"}' ",
         "interval": 5,
-        "format": "CPU TEMP: {} "
+        "format": "CPU TEMP: {} ",
+        "tooltip": false
     },
     "custom/gpu_temp": {
         "exec": "cat /sys/devices/pci0000:00/0000:00:03.1/0000:0b:00.0/0000:0c:00.0/0000:0d:00.0/hwmon/hwmon0/temp1_input | awk '{print $1/1000 \"°C\"}'",
         "interval": 5,
-        "format": "GPU TEMP: {} "
+        "format": "GPU TEMP: {} ",
+        "tooltip": false
     },
     "custom/power": {
         "format": "⏻ ",
         "tooltip": false,
         "on-click": "wlogout &"
-        //       "menu": "on-click",
-        ////       "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-        //       "menu-actions": {
-        //           "shutdown": "shutdown",
-        //           "reboot": "reboot",
-        //           "suspend": "systemctl suspend",
-        //           "hibernate": "systemctl hibernate"
-        //       }
     }
 }

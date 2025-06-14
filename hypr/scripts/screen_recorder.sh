@@ -24,7 +24,6 @@ if [ -f /tmp/wf-recorder.pid ]; then
     rm /tmp/wf-recorder.pid
     notify-send -i dialog-information "Recording stopped" "Recording stopped. File properly saved."
 else
-
     output_file="$HOME/Videos/Screencasts/recording-$(date +%F_%T).mkv"
     mkdir -p "$(dirname "$output_file")"
     slurp_output=$(slurp)
