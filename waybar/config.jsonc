@@ -12,11 +12,11 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "keyboard-state",
         "hyprland/workspaces",
         "hyprland/window"
     ],
     "modules-center": [
+        "keyboard-state",
         "custom/brightness",
         "clock",
         "hyprland/submap"
@@ -68,9 +68,11 @@
         "tooltip": false
     },
     "keyboard-state": {
-        "numlock": true,
+        "numlock": false,
         "capslock": true,
-        "format": "{name} {icon}",
+        "format": {
+            "capslock": "{icon}"
+        },
         "format-icons": {
             "locked": "",
             "unlocked": ""

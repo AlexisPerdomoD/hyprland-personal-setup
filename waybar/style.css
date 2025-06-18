@@ -54,6 +54,7 @@
 #custom-weather,
 #custom-power,
 #custom-cpu_temp,
+#keyboard-state,
 #custom-gpu_temp {
   margin: 0 5px;
   min-width: 25px;
@@ -100,7 +101,9 @@
 #custom-power:hover {
   color: rgba(200, 10, 10, 1);
 }
-
+#keyboard-state label.locked {
+  color: @color10;
+}
 #submap {
   font-weight: bolder;
   font-size: 16;
