@@ -8,3 +8,9 @@ ln -sf ./waybar $HOME/.config/waybar
 ln -sf ./wofi $HOME/.config/wofi
 ln -sf ./zellij $HOME/.config/zellij
 ln -sf ./xdg-desktop-portal $HOME/.config/xdg-desktop-portal
+
+# Modificar slack.desktop para lanzar con flags Wayland
+SLACK_DESKTOP="/usr/share/applications/slack.desktop"
+if [ -f "$SLACK_DESKTOP" ]; then
+    sudo sed -i 's|^Exec=slack|Exec=slack --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$SLACK_DESKTOP"
+fi
