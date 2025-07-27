@@ -1,16 +1,6 @@
 #!/bin/env zsh
 # changes wallpaper from a list of images in $WALLPAPER_DIR abd updates avalible colors for services
 
-timeout=60
-while ! (pgrep -x hyprpaper >/dev/null && hyprctl monitors >/dev/null); do
-    if [[ $timeout -eq 0 ]]; then
-        notify-send "hyprpaper not running"
-        exit 1
-    fi
-    timeout=$((timeout - 1))
-    sleep 0.1
-done
-
 WALLPAPER_DIR="$HOME/Documents/Wallpapers/"
 HISTORY_FILE="$HOME/Documents/.wallpaper_history"
 NEXT_WALLPAPER_POSITION=0

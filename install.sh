@@ -1,6 +1,26 @@
 #!/bin/env bash
 
-yay -S --needed --noconfirm hyprland hyprpaper hyprshot python-pywal16 wlogout mako waybar wofi alacritty gtk-3.0 gtk-4.0 slurp wf-recorder zellij bibata-cursor-theme
+yay -S --needed --noconfirm \
+    hyprland \
+    hyprpaper \
+    hyprshot \
+    python-pywal16 \
+    wlogout \
+    mako \
+    waybar \
+    wofi \
+    alacritty \
+    gtk-3.0 \
+    gtk-4.0 \
+    slurp \
+    wf-recorder \
+    zellij \
+    bibata-cursor-theme \
+    pavucontrol-qt \
+    bluemoon \
+    qt5ct \
+    qt6ct \
+    lxappearance
 
 ln -sf ./hypr $HOME/.config/hypr
 ln -sf ./mako $HOME/.config/mako
