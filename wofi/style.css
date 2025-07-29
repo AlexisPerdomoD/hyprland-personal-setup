@@ -47,7 +47,7 @@ window {
 
 #text {
   margin: 5px;
-  font-size: 16px;
+  font-size: 12px;
   font-family: "FantasqueSansM Nerd Font";
   font-weight: bold;
   border: none;
@@ -57,4 +57,16 @@ window {
 #entry:selected {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
+}
+#entry {
+  font-size: 2px;
+}
+#img {
+  /* font-size: 8px; */
+  margin: 0px 2px;
+  padding: 2px;
+  border-radius: 100%;
+  background-color: @color8;
+
+  /* box-sizing: border-box; */
 }
