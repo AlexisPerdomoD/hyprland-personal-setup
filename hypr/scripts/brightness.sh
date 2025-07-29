@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 STEP=5
 VCP=10    # código VCP para brillo
