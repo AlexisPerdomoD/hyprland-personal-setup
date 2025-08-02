@@ -8,7 +8,6 @@ yay -S --needed --noconfirm \
     python-pywal16 \
     wlogout \
     mako \
-    waybar \
     wofi \
     alacritty \
     gtk3 \
@@ -26,6 +25,12 @@ yay -S --needed --noconfirm \
     btop \
     caelestia-shell-git
 
+# @deprecated
+# waybar \
+# Waybar status bar configuration
+# [ "$(readlink "$HOME/.config/waybar")" != "$REPO_PATH/waybar" ] &&
+#     ln -sf "$REPO_PATH/waybar" "$HOME/.config/waybar"
+
 # Create symbolic links for configuration directories if they don't already exist or point to different locations
 # This ensures all config files are managed from this repository
 
@@ -36,10 +41,6 @@ yay -S --needed --noconfirm \
 # Mako notification daemon configuration
 [ "$(readlink "$HOME/.config/mako")" != "$REPO_PATH/mako" ] &&
     ln -sf "$REPO_PATH/mako" "$HOME/.config/mako"
-
-# Waybar status bar configuration
-[ "$(readlink "$HOME/.config/waybar")" != "$REPO_PATH/waybar" ] &&
-    ln -sf "$REPO_PATH/waybar" "$HOME/.config/waybar"
 
 # Wofi application launcher configuration
 [ "$(readlink "$HOME/.config/wofi")" != "$REPO_PATH/wofi" ] &&
@@ -70,6 +71,7 @@ yay -S --needed --noconfirm \
 # caelestia-shell-git
 [ "$(readlink "$HOME/.config/caelestia")" != "$REPO_PATH/caelestia" ] &&
     ln -sf "$REPO_PATH/caelestia" "$HOME/.config/caelestia"
+
 # Modificar electron app lanzadores para compatibilidad con wayland
 DESKTOP_FILE="/usr/share/applications/insomnia.desktop"
 INSOMNIA_DESKTOP="/usr/share/applications/slack.desktop"
