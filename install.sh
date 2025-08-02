@@ -1,5 +1,6 @@
 #!/bin/env bash
 
+REPO_PATH="$(pwd)"
 yay -S --needed --noconfirm \
     hyprland \
     hyprpaper \
@@ -20,16 +21,23 @@ yay -S --needed --noconfirm \
     bluemoon \
     qt5ct \
     qt6ct \
-    lxappearance
+    lxappearance \
+    fastfetch
 
-ln -sf ./hypr $HOME/.config/hypr
-ln -sf ./mako $HOME/.config/mako
-ln -sf ./waybar $HOME/.config/waybar
-ln -sf ./wofi $HOME/.config/wofi
-ln -sf ./zellij $HOME/.config/zellij
-ln -sf ./xdg-desktop-portal $HOME/.config/xdg-desktop-portal
+ln -sf $REPO_PATH/hypr $HOME/.config/hypr
+ln -sf $REPO_PATH/mako $HOME/.config/mako
+ln -sf $REPO_PATH/waybar $HOME/.config/waybar
+ln -sf $REPO_PATH/wofi $HOME/.config/wofi
+ln -sf $REPO_PATH/zellij $HOME/.config/zellij
+ln -sf $REPO_PATH/xdg-desktop-portal $HOME/.config/xdg-desktop-portal
+ln -sf $REPO_PATH/fastfetch $HOME/.config/fastfetch
 
-# Modificar slack.desktop para lanzar con flags Wayland
-SLACK_DESKTOP="/usr/share/applications/slack.desktop"
-[[ -f "$SLACK_DESKTOP" ]] &&
-    sudo sed -i 's|^Exec=slack|Exec=slack --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$SLACK_DESKTOP"
+# Modificar electron app lanzadores para compatibilidad con wayland
+DESKTOP_FILE="/usr/share/applications/insomnia.desktop"
+INSOMNIA_DESKTOP="/usr/share/applications/slack.desktop"
+
+[[ -f "$INSOMNIA_DESKTOP" ]] &&
+    sudo sed -i 's|^Exec=slack|Exec=slack --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$INSOMNIA_DESKTOP"
+
+[[ -f "$INSOMNIA_DESKTOP" ]] &&
+    sudo sed -i 's|^Exec=insomnia|Exec=insomnia --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$DESKTOP_FILE"
