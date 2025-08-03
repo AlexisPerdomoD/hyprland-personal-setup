@@ -79,8 +79,8 @@
   },
 
   "paths": {
-    "mediaGif": "root:/assets/bongocat.gif",
-    "sessionGif": "root:/assets/kurukuru.gif",
+    "mediaGif": "~/.config/caelestia/media.gif",
+    "sessionGif": "~/.config/caelestia/session.gif",
     "wallpaperDir": "~/Documents/Wallpapers/"
   },
 
