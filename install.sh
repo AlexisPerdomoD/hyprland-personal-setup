@@ -6,9 +6,6 @@ yay -S --needed --noconfirm \
     hyprpaper \
     hyprshot \
     python-pywal16 \
-    wlogout \
-    mako \
-    wofi \
     alacritty \
     gtk3 \
     gtk4 \
@@ -17,7 +14,6 @@ yay -S --needed --noconfirm \
     zellij \
     thunar \
     bibata-cursor-theme \
-    pavucontrol-qt \
     qt5ct \
     qt6ct \
     lxappearance \
@@ -25,26 +21,12 @@ yay -S --needed --noconfirm \
     btop \
     caelestia-shell-git
 
-# @deprecated
-# waybar \
-# Waybar status bar configuration
-# [ "$(readlink "$HOME/.config/waybar")" != "$REPO_PATH/waybar" ] &&
-#     ln -sf "$REPO_PATH/waybar" "$HOME/.config/waybar"
-
 # Create symbolic links for configuration directories if they don't already exist or point to different locations
 # This ensures all config files are managed from this repository
 
 # Hyprland window manager configuration
 [ "$(readlink "$HOME/.config/hypr")" != "$REPO_PATH/hypr" ] &&
     ln -sf "$REPO_PATH/hypr" "$HOME/.config/hypr"
-
-# Mako notification daemon configuration
-[ "$(readlink "$HOME/.config/mako")" != "$REPO_PATH/mako" ] &&
-    ln -sf "$REPO_PATH/mako" "$HOME/.config/mako"
-
-# Wofi application launcher configuration
-[ "$(readlink "$HOME/.config/wofi")" != "$REPO_PATH/wofi" ] &&
-    ln -sf "$REPO_PATH/wofi" "$HOME/.config/wofi"
 
 # Zellij terminal multiplexer configuration
 [ "$(readlink "$HOME/.config/zellij")" != "$REPO_PATH/zellij" ] &&

@@ -27,7 +27,7 @@
     }
   },
   "border": {
-    "rounding": 4,
+    "rounding": 6,
     "thickness": 4
   },
   "dashboard": {
@@ -37,7 +37,7 @@
   "launcher": {
     "actionPrefix": ">",
     "dragThreshold": 50,
-    "vimKeybinds": false,
+    "vimKeybinds": true,
     "enableDangerousActions": false,
     "maxShown": 8,
     "maxWallpapers": 9,
@@ -57,7 +57,7 @@
     "clearThreshold": 0.3,
     "defaultExpireTimeout": 5000,
     "expandThreshold": 20,
-    "expire": false
+    "expire": true
   },
   "osd": {
     "hideDelay": 2000
