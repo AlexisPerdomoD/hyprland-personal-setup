@@ -5,7 +5,7 @@
 
   "general": {
     "apps": {
-      "terminal": ["ghostty"],
+      "terminal": ["foot"],
       "audio": ["pavucontrol"]
     }
   },
