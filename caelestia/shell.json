@@ -2,6 +2,14 @@
   "background": {
     "enabled": true
   },
+
+  "general": {
+    "apps": {
+      "terminal": ["ghosty"],
+      "audio": ["pavucontrol"]
+    }
+  },
+
   "bar": {
     "dragThreshold": 20,
     "externalAudioProgram": ["pavucontrol"],
@@ -14,6 +22,7 @@
       "showKbLayout": true,
       "showNetwork": true
     },
+
     "workspaces": {
       "activeIndicator": true,
       "activeLabel": "󰮯 ",
@@ -26,14 +35,17 @@
       "shown": 5
     }
   },
+
   "border": {
     "rounding": 6,
     "thickness": 4
   },
+
   "dashboard": {
     "mediaUpdateInterval": 500,
     "visualiserBars": 45
   },
+
   "launcher": {
     "actionPrefix": ">",
     "dragThreshold": 50,
@@ -49,9 +61,11 @@
       "wallpapers": false
     }
   },
+
   "lock": {
     "maxNotifs": 5
   },
+
   "notifs": {
     "actionOnClick": false,
     "clearThreshold": 0.3,
@@ -59,19 +73,23 @@
     "expandThreshold": 20,
     "expire": true
   },
+
   "osd": {
     "hideDelay": 2000
   },
+
   "paths": {
     "mediaGif": "root:/assets/bongocat.gif",
     "sessionGif": "root:/assets/kurukuru.gif",
     "wallpaperDir": "~/Documents/Wallpapers/"
   },
+
   "services": {
     "weatherLocation": "10,10",
     "useFahrenheit": false,
     "useTwelveHourClock": false
   },
+
   "session": {
     "dragThreshold": 30,
     "vimKeybinds": false,
