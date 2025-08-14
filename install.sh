@@ -19,7 +19,8 @@ yay -S --needed --noconfirm \
     lxappearance \
     fastfetch \
     btop \
-    caelestia-shell-git
+    caelestia-shell-git \
+    foot
 
 # Create symbolic links for configuration directories if they don't already exist or point to different locations
 # This ensures all config files are managed from this repository
@@ -53,6 +54,9 @@ yay -S --needed --noconfirm \
 # caelestia-shell-git
 [ "$(readlink "$HOME/.config/caelestia")" != "$REPO_PATH/caelestia" ] &&
     ln -sf "$REPO_PATH/caelestia" "$HOME/.config/caelestia"
+# foot
+[ "$(readlink "$HOME/.config/foot")" != "$REPO_PATH/foot" ] &&
+    ln -sf "$REPO_PATH/foot" "$HOME/.config/foot"
 
 # Modificar electron app lanzadores para compatibilidad con wayland
 DESKTOP_FILE="/usr/share/applications/insomnia.desktop"

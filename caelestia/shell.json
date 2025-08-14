@@ -50,7 +50,7 @@
     "actionPrefix": ">",
     "dragThreshold": 50,
     "vimKeybinds": true,
-    "enableDangerousActions": false,
+    "enableDangerousActions": true,
     "maxShown": 8,
     "maxWallpapers": 9,
     "useFuzzy": {
