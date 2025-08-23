@@ -24,7 +24,8 @@ yay -S --needed --noconfirm \
 
 # Create symbolic links for configuration directories if they don't already exist or point to different locations
 # This ensures all config files are managed from this repository
-
+[ "$(readlink "$HOME/.bashrc")" != "$REPO_PATH/shell/.bashrc" ] &&
+    ln -sf "$REPO_PATH/shell/.bashrc" "$HOME/.bashrc"
 # Hyprland window manager configuration
 [ "$(readlink "$HOME/.config/hypr")" != "$REPO_PATH/hypr" ] &&
     ln -sf "$REPO_PATH/hypr" "$HOME/.config/hypr"
