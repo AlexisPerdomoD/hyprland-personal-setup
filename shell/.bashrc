@@ -106,6 +106,4 @@ fi
 # STARTUP
 #==============================================================================
 export ZELLIJ_AUTO_ATTACH=true
-fastfetch
-echo "HOLA MUNDO, TERMINAL READY"
 echo "USR: $USER"
