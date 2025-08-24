@@ -206,7 +206,7 @@ multiplier = 3
 # normal  = {family = "Bedstead"}
 # normal = { family = "LeagueMono" }
 normal = {family = "FantasqueSansMNerd Font" , style = "Regular"} 
-size = 16
+size = 10
 # builtin_box_drawing = true 
 # enable_ligatures = true
 # COLORS
