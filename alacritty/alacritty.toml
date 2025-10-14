@@ -139,12 +139,12 @@
 #startup_mode = "Windowed"
 # title = "Alacritty"
 dynamic_title = true 
-decorations_theme_variant = "Dark"
+# decorations_theme_variant = "Dark"
 decorations = "None"
-opacity = 0.85
+# opacity = 0.85
 # blur = true 
-dimensions = { columns = 180, lines = 35 }
-padding = { x = 0, y = 0 }
+# dimensions = { columns = 180, lines = 35 }
+# padding = { x = 0, y = 0 }
 # SCROLLING
 # This section documents the [scrolling] table of the configuration file.
 # history = <integer>

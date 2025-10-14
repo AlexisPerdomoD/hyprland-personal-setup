@@ -6,7 +6,25 @@
   "general": {
     "apps": {
       "terminal": ["foot"],
-      "audio": ["pavucontrol"]
+      "audio": ["pavucontrol"],
+      "editor": ["nvim"]
+    }
+  },
+
+  "border": {
+    "rounding": 6,
+    "thickness": 4
+  },
+  "appearance": {
+    "font": {
+      "family": {
+        "sans": "Terminus",
+        "material": "Material Symbols Rounded",
+        "mono": "Terminus",
+        "clock": "Terminus"
+      },
+
+      "size": { "scale": 1 }
     }
   },
 
@@ -16,7 +34,7 @@
     "persistent": true,
     "showOnHover": true,
     "status": {
-      "showAudio": false,
+      "showAudio": true,
       "showBattery": true,
       "showBluetooth": true,
       "showKbLayout": true,
@@ -36,12 +54,8 @@
     }
   },
 
-  "border": {
-    "rounding": 6,
-    "thickness": 4
-  },
-
   "dashboard": {
+    "enabled": true,
     "mediaUpdateInterval": 500,
     "visualiserBars": 45
   },
@@ -67,7 +81,7 @@
   },
 
   "notifs": {
-    "actionOnClick": false,
+    "actionOnClick": true,
     "clearThreshold": 0.3,
     "defaultExpireTimeout": 5000,
     "expandThreshold": 20,
