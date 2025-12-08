@@ -1,70 +1,55 @@
 #!/bin/env bash
 
 REPO_PATH="$(pwd)"
-yay -S --needed --noconfirm \
-    hyprland \
-    hyprpaper \
-    hyprshot \
-    python-pywal16 \
-    alacritty \
-    gtk3 \
-    gtk4 \
-    slurp \
-    wf-recorder \
-    zellij \
-    thunar \
-    bibata-cursor-theme \
-    qt5ct \
-    qt6ct \
-    lxappearance \
-    fastfetch \
-    btop \
-    caelestia-shell-git \
-    foot
 
-# Create symbolic links for configuration directories if they don't already exist or point to different locations
-# This ensures all config files are managed from this repository
+########## CORE ##############
+yay -S --needed --noconfirm hyprland alacritty gtk3 gtk4 slurp zellij thunar bibata-cursor-theme qt5ct qt6ct lxappearance fastfetch btop caelestia-shell-git foot neovide
+# DEPRECADO POR CAELESTIA SHELL
+# hyprpaper \
+# hyprshot \
+# python-pywal16 \
+# wf-recorder
+
+########### FONTS ############
+sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martian-mono-nerd ttf-profont-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-go-nerd ttf-terminus-nerd ttf-hack-nerd
+
+########## LINKS ############
 [ "$(readlink "$HOME/.bashrc")" != "$REPO_PATH/shell/.bashrc" ] &&
     ln -sf "$REPO_PATH/shell/.bashrc" "$HOME/.bashrc"
-# Hyprland window manager configuration
+
 [ "$(readlink "$HOME/.config/hypr")" != "$REPO_PATH/hypr" ] &&
     ln -sf "$REPO_PATH/hypr" "$HOME/.config/hypr"
 
-# Zellij terminal multiplexer configuration
 [ "$(readlink "$HOME/.config/zellij")" != "$REPO_PATH/zellij" ] &&
     ln -sf "$REPO_PATH/zellij" "$HOME/.config/zellij"
 
-# XDG desktop portal configuration for screen sharing and other desktop integration features
 [ "$(readlink "$HOME/.config/xdg-desktop-portal")" != "$REPO_PATH/xdg-desktop-portal" ] &&
     ln -sf "$REPO_PATH/xdg-desktop-portal" "$HOME/.config/xdg-desktop-portal"
 
-# Fastfetch system information display configuration
 [ "$(readlink "$HOME/.config/fastfetch")" != "$REPO_PATH/fastfetch" ] &&
     ln -sf "$REPO_PATH/fastfetch" "$HOME/.config/fastfetch"
 
-# Firefox styling
 [ "$(readlink "$HOME/.config/firefox")" != "$REPO_PATH/firefox" ] &&
     ln -sf "$REPO_PATH/firefox" "$HOME/.config/firefox"
 
-# thunar
 [ "$(readlink "$HOME/.config/Thunar")" != "$REPO_PATH/thunar" ] &&
     ln -sf "$REPO_PATH/thunar" "$HOME/.config/Thunar"
-# thunar
+
 [ "$(readlink "$HOME/.config/btop")" != "$REPO_PATH/btop" ] &&
     ln -sf "$REPO_PATH/btop" "$HOME/.config/btop"
-# caelestia-shell-git
+
 [ "$(readlink "$HOME/.config/caelestia")" != "$REPO_PATH/caelestia" ] &&
     ln -sf "$REPO_PATH/caelestia" "$HOME/.config/caelestia"
-# foot
+
 [ "$(readlink "$HOME/.config/foot")" != "$REPO_PATH/foot" ] &&
     ln -sf "$REPO_PATH/foot" "$HOME/.config/foot"
 
-# Modificar electron app lanzadores para compatibilidad con wayland
-DESKTOP_FILE="/usr/share/applications/insomnia.desktop"
-INSOMNIA_DESKTOP="/usr/share/applications/slack.desktop"
+########### WAYLAND COMPATIBILITY #############
+INSOMNIA_DESKTOP="/usr/share/applications/insomnia.desktop"
+SLACK_DESKTOP="/usr/share/applications/slack.desktop"
+
+[[ -f "$SLACK_DESKTOP" ]] &&
+    sudo sed -i 's|^Exec=slack|Exec=slack --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$SLACK_DESKTOP"
 
 [[ -f "$INSOMNIA_DESKTOP" ]] &&
-    sudo sed -i 's|^Exec=slack|Exec=slack --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$INSOMNIA_DESKTOP"
-
-[[ -f "$INSOMNIA_DESKTOP" ]] &&
-    sudo sed -i 's|^Exec=insomnia|Exec=insomnia --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$DESKTOP_FILE"
+    sudo sed -i 's|^Exec=insomnia|Exec=insomnia --enable-features=WaylandWindowDecorations --ozone-platform=wayland|' "$INSOMNIA_DESKTOP"

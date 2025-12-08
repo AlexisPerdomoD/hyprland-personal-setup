@@ -201,13 +201,17 @@ multiplier = 3
 [font]
 # normal = { family = "SourceCodeVF", style = "Medium" }
 # normal = { family = "Iosevka Nerd Font" , style = "Bold"}
-# normal = {family = "SpaceMono Nerd Font"}
 # normal  = {family = "ProFont Windows Nerd Font"}
-# normal  = {family = "Bedstead"}
-# normal = { family = "LeagueMono" }
-normal = {family = "FantasqueSansMNerd Font" , style = "Regular"} 
-size = 10
-# builtin_box_drawing = true 
+# normal = {family = "Terminus"} 
+# normal = {family = "CaskaydiaCove Nerd Font"}
+# normal = {family = "FantasqueSansM Nerd Font"}
+# normal = {family = "ProFont IIx Nerd Font"}
+# normal = {family = "JetBrainsMono Nerd Font"}
+# normal = {family = "MartianMono Nerd Font"}
+# normal = {family = "MesloLGMDZ Nerd Font"}
+normal = {family = "MesloLGL Nerd Font"}
+size = 11
+builtin_box_drawing = true 
 # enable_ligatures = true
 # COLORS
 # This section documents the [colors] table of the configuration file.
@@ -294,7 +298,7 @@ save_to_clipboard = true
 # Default: 0.15
 
 [cursor]
-style = { shape = "Block", blinking = "On" }
+style = { shape = "Block", blinking = "Always" }
 unfocused_hollow = true
 thickness = 0.25
 blink_interval = 500
