@@ -203,13 +203,13 @@ multiplier = 3
 # normal = { family = "Iosevka Nerd Font" , style = "Bold"}
 # normal  = {family = "ProFont Windows Nerd Font"}
 # normal = {family = "Terminus"} 
-# normal = {family = "CaskaydiaCove Nerd Font"}
+normal = {family = "CaskaydiaCove Nerd Font"}
 # normal = {family = "FantasqueSansM Nerd Font"}
 # normal = {family = "ProFont IIx Nerd Font"}
 # normal = {family = "JetBrainsMono Nerd Font"}
 # normal = {family = "MartianMono Nerd Font"}
 # normal = {family = "MesloLGMDZ Nerd Font"}
-normal = {family = "MesloLGL Nerd Font"}
+# normal = {family = "MesloLGL Nerd Font"}
 size = 11
 builtin_box_drawing = true 
 # enable_ligatures = true

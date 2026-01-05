@@ -14,6 +14,10 @@ yay -S --needed --noconfirm hyprland alacritty gtk3 gtk4 slurp zellij thunar bib
 sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martian-mono-nerd ttf-profont-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-go-nerd ttf-terminus-nerd ttf-hack-nerd
 
 ########## LINKS ############
+# Wallpapers
+[ "$(readlink "$HOME/Documents/Wallpapers")" != "$REPO_PATH/Wallpapers" ] &&
+    ln -sf "$REPO_PATH/Wallpapers" "$HOME/Documents/Wallpapers"
+
 [ "$(readlink "$HOME/.bashrc")" != "$REPO_PATH/shell/.bashrc" ] &&
     ln -sf "$REPO_PATH/shell/.bashrc" "$HOME/.bashrc"
 
@@ -28,6 +32,9 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martia
 
 [ "$(readlink "$HOME/.config/fastfetch")" != "$REPO_PATH/fastfetch" ] &&
     ln -sf "$REPO_PATH/fastfetch" "$HOME/.config/fastfetch"
+
+[ "$(readlink "$HOME/.config/alacritty")" != "$REPO_PATH/alacritty" ] &&
+    ln -sf "$REPO_PATH/alacritty" "$HOME/.config/alacritty"
 
 [ "$(readlink "$HOME/.config/firefox")" != "$REPO_PATH/firefox" ] &&
     ln -sf "$REPO_PATH/firefox" "$HOME/.config/firefox"
