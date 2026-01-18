@@ -2,7 +2,6 @@
   "background": {
     "enabled": true
   },
-
   "general": {
     "apps": {
       "terminal": ["alacritty"],
@@ -10,28 +9,27 @@
       "editor": ["neovide"]
     }
   },
-
   "border": {
-    "rounding": 6,
-    "thickness": 4
+    "rounding": 4,
+    "thickness": 2
   },
   "appearance": {
     "font": {
       "family": {
-        "sans": "Terminus",
-        "material": "Material Symbols Rounded",
-        "mono": "Terminus",
-        "clock": "Terminus"
+        "sans": "Terminess Nerd Font",
+        "material": "Material Symbols Sharp",
+        "mono": "Terminess Nerd Font Mono",
+        "clock": "Terminess Nerd Font Mono"
       },
-
-      "size": { "scale": 1 }
+      "size": {
+        "scale": 1
+      }
     }
   },
-
   "bar": {
     "dragThreshold": 20,
     "externalAudioProgram": ["pavucontrol"],
-    "persistent": false,
+    "persistent": true,
     "showOnHover": true,
     "status": {
       "showAudio": true,
@@ -40,7 +38,6 @@
       "showKbLayout": true,
       "showNetwork": true
     },
-
     "workspaces": {
       "activeIndicator": true,
       "activeLabel": "󰮯 ",
@@ -53,13 +50,11 @@
       "shown": 5
     }
   },
-
   "dashboard": {
     "enabled": true,
     "mediaUpdateInterval": 500,
     "visualiserBars": 45
   },
-
   "launcher": {
     "actionPrefix": ">",
     "dragThreshold": 50,
@@ -75,11 +70,9 @@
       "wallpapers": false
     }
   },
-
   "lock": {
     "maxNotifs": 5
   },
-
   "notifs": {
     "actionOnClick": true,
     "clearThreshold": 0.3,
@@ -87,23 +80,19 @@
     "expandThreshold": 20,
     "expire": true
   },
-
   "osd": {
     "hideDelay": 2000
   },
-
   "paths": {
     "mediaGif": "~/.config/caelestia/media.gif",
     "sessionGif": "~/.config/caelestia/session.gif",
     "wallpaperDir": "~/Documents/Wallpapers/"
   },
-
   "services": {
     "weatherLocation": "10,10",
     "useFahrenheit": false,
     "useTwelveHourClock": false
   },
-
   "session": {
     "dragThreshold": 30,
     "vimKeybinds": false,
