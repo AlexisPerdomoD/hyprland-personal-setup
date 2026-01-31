@@ -24,9 +24,6 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martia
 [ "$(readlink "$HOME/.config/hypr")" != "$REPO_PATH/hypr" ] &&
     ln -sf "$REPO_PATH/hypr" "$HOME/.config/hypr"
 
-[ "$(readlink "$HOME/.config/zellij")" != "$REPO_PATH/zellij" ] &&
-    ln -sf "$REPO_PATH/zellij" "$HOME/.config/zellij"
-
 [ "$(readlink "$HOME/.config/xdg-desktop-portal")" != "$REPO_PATH/xdg-desktop-portal" ] &&
     ln -sf "$REPO_PATH/xdg-desktop-portal" "$HOME/.config/xdg-desktop-portal"
 
