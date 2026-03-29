@@ -107,3 +107,7 @@ fi
 #==============================================================================
 export ZELLIJ_AUTO_ATTACH=true
 echo "USR: $USER"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/perdomo/.sdkman"
+[[ -s "/home/perdomo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/perdomo/.sdkman/bin/sdkman-init.sh"

@@ -204,7 +204,8 @@ multiplier = 3
 # normal  = {family = "ProFont Windows Nerd Font"}
 # normal = {family = "Terminus"} 
 # normal = {family = "CaskaydiaCove Nerd Font"}
-normal = {family = "FantasqueSansM Nerd Font"}
+normal = {family = "AnonymicePro Nerd Font"}
+# normal = {family = "FantasqueSansM Nerd Font"}
 # normal = {family = "ProFont IIx Nerd Font"}
 # normal = {family = "JetBrainsMono Nerd Font"}
 # normal = {family = "MartianMono Nerd Font"}
