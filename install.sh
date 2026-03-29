@@ -1,18 +1,45 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 REPO_PATH="$(pwd)"
 
 ########## CORE ##############
-sudo pacman -S --needed --noconfirm hyprland alacritty gtk3 gtk4 slurp zellij thunar bibata-cursor-theme qt5ct qt6ct lxappearance fastfetch btop foot neovide
+yay -S --needed --noconfirm hyprland \
+    alacritty \
+    gtk3 \
+    gtk4 \
+    slurp \
+    zellij \
+    thunar \
+    bibata-cursor-theme \
+    qt5ct \
+    qt6ct \
+    lxappearance \
+    fastfetch \
+    btop \
+    foot \
+    neovide \
+    dms-shell-bin \
+    cava \
+    matugen
 # DEPRECADO
 # hyprpaper \
 # hyprshot \
 # python-pywal16 \
 # wf-recorder \
 # caelestia-shell-git
-
+#
 ########### FONTS ############
-sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martian-mono-nerd ttf-profont-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-go-nerd ttf-terminus-nerd ttf-hack-nerd
+sudo pacman -S --needed --noconfirm ttf-meslo-nerd \
+    ttf-fantasque-nerd \
+    ttf-martian-mono-nerd \
+    ttf-profont-nerd \
+    ttf-jetbrains-mono-nerd \
+    ttf-firacode-nerd \
+    ttf-go-nerd \
+    ttf-terminus-nerd \
+    ttf-hack-nerd
 
 ########## LINKS ############
 # Wallpapers
@@ -43,12 +70,11 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martia
 [ "$(readlink "$HOME/.config/btop")" != "$REPO_PATH/btop" ] &&
     ln -sf "$REPO_PATH/btop" "$HOME/.config/btop"
 
-# [ "$(readlink "$HOME/.config/caelestia")" != "$REPO_PATH/caelestia" ] &&
-#     ln -sf "$REPO_PATH/caelestia" "$HOME/.config/caelestia"
-
 [ "$(readlink "$HOME/.config/foot")" != "$REPO_PATH/foot" ] &&
     ln -sf "$REPO_PATH/foot" "$HOME/.config/foot"
 
+[ "$(readlink "$HOME/.config/DankMaterialShell")" != "$REPO_PATH/DankMaterialShell" ] &&
+    ln -sf "$REPO_PATH/DankMaterialShell" "$HOME/.config/DankMaterialShell"
 ########### WAYLAND COMPATIBILITY #############
 INSOMNIA_DESKTOP="/usr/share/applications/insomnia.desktop"
 SLACK_DESKTOP="/usr/share/applications/slack.desktop"
