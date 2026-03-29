@@ -1,6 +1,6 @@
 {
-  "currentThemeName": "purple",
-  "currentThemeCategory": "generic",
+  "currentThemeName": "dynamic",
+  "currentThemeCategory": "dynamic",
   "customThemeFile": "",
   "registryThemeVariants": {},
   "matugenScheme": "scheme-tonal-spot",
@@ -8,11 +8,11 @@
   "matugenTargetMonitor": "",
   "popupTransparency": 1,
   "dockTransparency": 1,
-  "widgetBackgroundColor": "sch",
+  "widgetBackgroundColor": "sc",
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
-  "buttonColorMode": "primary",
-  "cornerRadius": 12,
+  "buttonColorMode": "secondary",
+  "cornerRadius": 4,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
@@ -197,7 +197,7 @@
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "System Default",
-    "size": 24,
+    "size": 18,
     "niri": {
       "hideWhenTyping": false,
       "hideAfterInactiveMs": 0
@@ -218,7 +218,7 @@
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
-  "fontFamily": "Inter Variable",
+  "fontFamily": "APL385 Unicode",
   "monoFontFamily": "Fira Code",
   "fontWeight": 400,
   "fontScale": 1,
@@ -229,7 +229,7 @@
   "notepadTransparencyOverride": -1,
   "notepadLastCustomTransparency": 0.7,
   "soundsEnabled": true,
-  "useSystemSoundTheme": false,
+  "useSystemSoundTheme": true,
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
@@ -384,7 +384,7 @@
   "hyprlandOutputSettings": {
     "DP-2": {
       "bitdepth": 10,
-      "colorManagement": "hdr"
+      "colorManagement": "auto"
     }
   },
   "displayProfiles": {},
@@ -397,11 +397,21 @@
       "id": "default",
       "name": "Main Bar",
       "enabled": true,
-      "position": 0,
-      "screenPreferences": ["all"],
+      "position": 1,
+      "screenPreferences": [
+        "all"
+      ],
       "showOnLastDisplay": true,
-      "leftWidgets": ["launcherButton", "workspaceSwitcher", "focusedWindow"],
-      "centerWidgets": ["music", "clock", "weather"],
+      "leftWidgets": [
+        "launcherButton",
+        "workspaceSwitcher",
+        "focusedWindow"
+      ],
+      "centerWidgets": [
+        "music",
+        "clock",
+        "weather"
+      ],
       "rightWidgets": [
         "systemTray",
         "clipboard",
@@ -412,36 +422,36 @@
         "controlCenterButton"
       ],
       "spacing": 4,
-      "innerPadding": 4,
+      "innerPadding": -4,
       "bottomGap": 0,
       "transparency": 1,
       "widgetTransparency": 1,
       "squareCorners": false,
       "noBackground": false,
-      "maximizeWidgetIcons": false,
-      "maximizeWidgetText": false,
+      "maximizeWidgetIcons": true,
+      "maximizeWidgetText": true,
       "removeWidgetPadding": false,
-      "widgetPadding": 8,
-      "gothCornersEnabled": false,
+      "widgetPadding": 4,
+      "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
-      "gothCornerRadiusValue": 12,
+      "gothCornerRadiusValue": 9,
       "borderEnabled": false,
-      "borderColor": "surfaceText",
-      "borderOpacity": 1,
-      "borderThickness": 1,
+      "borderColor": "primary",
+      "borderOpacity": 0.87,
+      "borderThickness": 5,
       "widgetOutlineEnabled": false,
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
-      "fontScale": 1,
-      "iconScale": 1,
+      "fontScale": 0.9,
+      "iconScale": 0.8,
       "autoHide": false,
-      "autoHideDelay": 250,
+      "autoHideDelay": 308,
       "showOnWindowsOpen": false,
       "openOnOverview": false,
       "visible": true,
       "popupGapsAuto": true,
-      "popupGapsManual": 4,
+      "popupGapsManual": 6,
       "maximizeDetection": true,
       "scrollEnabled": true,
       "scrollXBehavior": "column",
@@ -477,7 +487,9 @@
   "desktopClockY": -1,
   "desktopClockWidth": 280,
   "desktopClockHeight": 180,
-  "desktopClockDisplayPreferences": ["all"],
+  "desktopClockDisplayPreferences": [
+    "all"
+  ],
   "systemMonitorEnabled": false,
   "systemMonitorShowHeader": true,
   "systemMonitorTransparency": 0.8,
@@ -514,7 +526,9 @@
   "systemMonitorY": -1,
   "systemMonitorWidth": 320,
   "systemMonitorHeight": 480,
-  "systemMonitorDisplayPreferences": ["all"],
+  "systemMonitorDisplayPreferences": [
+    "all"
+  ],
   "systemMonitorVariants": [],
   "desktopWidgetPositions": {},
   "desktopWidgetGridSettings": {},
