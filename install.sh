@@ -3,12 +3,13 @@
 REPO_PATH="$(pwd)"
 
 ########## CORE ##############
-yay -S --needed --noconfirm hyprland alacritty gtk3 gtk4 slurp zellij thunar bibata-cursor-theme qt5ct qt6ct lxappearance fastfetch btop caelestia-shell-git foot neovide
-# DEPRECADO POR CAELESTIA SHELL
+sudo pacman -S --needed --noconfirm hyprland alacritty gtk3 gtk4 slurp zellij thunar bibata-cursor-theme qt5ct qt6ct lxappearance fastfetch btop foot neovide
+# DEPRECADO
 # hyprpaper \
 # hyprshot \
 # python-pywal16 \
-# wf-recorder
+# wf-recorder \
+# caelestia-shell-git
 
 ########### FONTS ############
 sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martian-mono-nerd ttf-profont-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-go-nerd ttf-terminus-nerd ttf-hack-nerd
@@ -42,8 +43,8 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd ttf-fantasque-nerd ttf-martia
 [ "$(readlink "$HOME/.config/btop")" != "$REPO_PATH/btop" ] &&
     ln -sf "$REPO_PATH/btop" "$HOME/.config/btop"
 
-[ "$(readlink "$HOME/.config/caelestia")" != "$REPO_PATH/caelestia" ] &&
-    ln -sf "$REPO_PATH/caelestia" "$HOME/.config/caelestia"
+# [ "$(readlink "$HOME/.config/caelestia")" != "$REPO_PATH/caelestia" ] &&
+#     ln -sf "$REPO_PATH/caelestia" "$HOME/.config/caelestia"
 
 [ "$(readlink "$HOME/.config/foot")" != "$REPO_PATH/foot" ] &&
     ln -sf "$REPO_PATH/foot" "$HOME/.config/foot"
