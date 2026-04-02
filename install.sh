@@ -21,6 +21,7 @@ yay -S --needed --noconfirm hyprland \
     foot \
     neovide \
     dms-shell-bin \
+    adw-gtk-theme \
     cava \
     matugen
 # DEPRECADO
