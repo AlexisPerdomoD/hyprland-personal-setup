@@ -23,7 +23,8 @@ yay -S --needed --noconfirm hyprland \
     dms-shell-bin \
     adw-gtk-theme \
     cava \
-    matugen
+    matugen \
+    dmenu 
 # DEPRECADO
 # hyprpaper \
 # hyprshot \
