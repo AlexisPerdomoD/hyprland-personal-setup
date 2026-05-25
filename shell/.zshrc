@@ -78,7 +78,7 @@ eval "$(starship init zsh)"
 alias v="nvim ."
 alias c="code . --profile m"
 alias z='zellij a'
-# Git 
+# Git
 alias gb='git switch $(git branch | fzf)'
 # Fuzzy find with neovim integration
 alias vf='nvim $(fzf --preview "batcat --style=numbers --color=always {}" --preview-window=up:65%)'
@@ -116,10 +116,10 @@ alias du='du -h --max-depth=1'
 #==============================================================================
 load_fzf() {
     command -v fzf >/dev/null 2>&1 || return 1
-    
+
     local fzf_completion="/usr/share/fzf/completion.zsh"
     [[ -f "$fzf_completion" ]] && source "$fzf_completion"
-    
+
     local fzf_keybindings="/usr/share/fzf/key-bindings.zsh"
     [[ -f "$fzf_keybindings" ]] && source "$fzf_keybindings"
 }
@@ -129,25 +129,15 @@ load_fzf
 # PLUGINS AND DEPENDENCIES
 #==============================================================================
 # Auto-install zsh-autosuggestions if not present
-if [[ ! -e ~/.config/zsh/dependencies/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-    git clone  https://github.com/zsh-users/zsh-autosuggestions $DEPENDENCIES_DIR/zsh-autosuggestions
+if [[ ! -e $DEPENDENCIES_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions $DEPENDENCIES_DIR/zsh-autosuggestions
 fi
-source ~/.config/zsh/dependencies/zsh-autosuggestions/zsh-autosuggestions.zsh
-# Load fnm 
+source $DEPENDENCIES_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Load fnm
 
-FNM_PATH="/home/six66/.local/share/fnm"
+FNM_PATH="~/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env --use-on-cd --shell zsh`"
-  # eval "`fnm env `"
+    export PATH="$FNM_PATH:$PATH"
+    eval "$(fnm env --use-on-cd --shell zsh)"
+    # eval "`fnm env `"
 fi
-# if command -v fnm > /dev/null 2>&1; then
-#     eval "$(fnm env --use-on-cd --shell zsh)"
-# fi
-#==============================================================================
-# STARTUP CONFIGURATION
-#==============================================================================
-ZELLIJ_AUTO_ATTACH=true
-fastfetch
-echo "HOLA MUNDO, TERMINAL READY"
-echo "USR: $USER"

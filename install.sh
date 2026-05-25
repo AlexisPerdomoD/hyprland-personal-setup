@@ -24,7 +24,7 @@ yay -S --needed --noconfirm hyprland \
     adw-gtk-theme \
     cava \
     matugen \
-    dmenu 
+    dmenu
 # DEPRECADO
 # hyprpaper \
 # hyprshot \
@@ -51,8 +51,8 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd \
 [ "$(readlink "$HOME/.bashrc")" != "$REPO_PATH/shell/.bashrc" ] &&
     ln -sf "$REPO_PATH/shell/.bashrc" "$HOME/.bashrc"
 
-[ "$(readlink "$HOME/.zshrc")" != "$REPO_PATH/shell/.zshrc" ] &&
-    ln -sf "$REPO_PATH/shell/.zshrc" "$HOME/.zshrc"
+[ "$(readlink "$HOME/.config/zsh/.zshrc")" != "$REPO_PATH/shell/.zshrc" ] &&
+    ln -sf "$REPO_PATH/shell/.zshrc" "$HOME/.config/zsh/.zshrc"
 
 [ "$(readlink "$HOME/.config/hypr")" != "$REPO_PATH/hypr" ] &&
     ln -sf "$REPO_PATH/hypr" "$HOME/.config/hypr"
