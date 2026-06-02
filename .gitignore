@@ -2,5 +2,6 @@ mako/colors
 wofi/colors.css
 waybar/colors.css
 hypr/scheme
+hypr/dms
 btop/themes
 .config

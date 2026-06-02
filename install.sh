@@ -38,10 +38,11 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd \
     ttf-martian-mono-nerd \
     ttf-profont-nerd \
     ttf-jetbrains-mono-nerd \
-    ttf-firacode-nerd \
-    ttf-go-nerd \
     ttf-terminus-nerd \
-    ttf-hack-nerd
+    ttf-hack-nerd \
+    ttf-monofur-nerd \
+    ttf-iosevka-nerd 
+
 
 ########## LINKS ############
 # Wallpapers
