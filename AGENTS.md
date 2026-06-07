@@ -10,18 +10,18 @@ Static dotfiles repo managed via symlinks. No build system, no tests, no package
 
 ## Architecture
 
-| Dir | Symlinked to | Notes |
-|-----|-------------|-------|
-| `hypr/` | `~/.config/hypr` | Main compositor config; entrypoint `hyprland.conf` |
-| `shell/` | `~/.bashrc`, `~/.zshrc` | Shell configs |
-| `alacritty/` | `~/.config/alacritty` | Imports `dank-theme.toml` |
-| `btop/` | `~/.config/btop` | Themes dir is gitignored (generated) |
-| `foot/` | `~/.config/foot` | Imports `dank-colors.ini` |
-| `thunar/` | `~/.config/Thunar` | File manager bindings |
-| `firefox/` | `~/.config/firefox` | Just `userChrome.css` |
-| `xdg-desktop-portal/` | `~/.config/xdg-desktop-portal` | Wayland portal config |
-| `DankMaterialShell/` | `~/.config/DankMaterialShell` | Active shell/panel system |
-| `Wallpapers/` | `~/Documents/Wallpapers` | Wallpaper image collection |
+| Dir                   | Symlinked to                   | Notes                                              |
+| --------------------- | ------------------------------ | -------------------------------------------------- |
+| `hypr/`               | `~/.config/hypr`               | Main compositor config; entrypoint `hyprland.conf` |
+| `shell/`              | `~/.bashrc`, `~/.zshrc`        | Shell configs                                      |
+| `alacritty/`          | `~/.config/alacritty`          | Imports `dank-theme.toml`                          |
+| `btop/`               | `~/.config/btop`               | Themes dir is gitignored (generated)               |
+| `foot/`               | `~/.config/foot`               | Imports `dank-colors.ini`                          |
+| `thunar/`             | `~/.config/Thunar`             | File manager bindings                              |
+| `firefox/`            | `~/.config/firefox`            | Just `userChrome.css`                              |
+| `xdg-desktop-portal/` | `~/.config/xdg-desktop-portal` | Wayland portal config                              |
+| `DankMaterialShell/`  | `~/.config/DankMaterialShell`  | Active shell/panel system                          |
+| `Wallpapers/`         | `~/Documents/Wallpapers`       | Wallpaper image collection                         |
 
 ## Keypoints
 
