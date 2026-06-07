@@ -17,8 +17,8 @@
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
   "hyprlandLayoutGapsOverride": 4,
-  "hyprlandLayoutRadiusOverride": 2,
-  "hyprlandLayoutBorderSize": 3,
+  "hyprlandLayoutRadiusOverride": 4,
+  "hyprlandLayoutBorderSize": 2,
   "mangoLayoutGapsOverride": -1,
   "mangoLayoutRadiusOverride": -1,
   "mangoLayoutBorderSize": -1,
@@ -28,9 +28,9 @@
   "useFahrenheit": false,
   "windSpeedUnit": "kmh",
   "nightModeEnabled": false,
-  "animationSpeed": 1,
-  "customAnimationDuration": 500,
-  "syncComponentAnimationSpeeds": true,
+  "animationSpeed": 4,
+  "customAnimationDuration": 126,
+  "syncComponentAnimationSpeeds": false,
   "popoutAnimationSpeed": 1,
   "popoutCustomAnimationDuration": 150,
   "modalAnimationSpeed": 1,
@@ -218,8 +218,8 @@
       "hideAfterInactiveMs": 0
     },
     "hyprland": {
-      "hideOnKeyPress": false,
-      "hideOnTouch": false,
+      "hideOnKeyPress": true,
+      "hideOnTouch": true,
       "inactiveTimeout": 0
     },
     "dwl": {
@@ -234,7 +234,7 @@
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
   "fontFamily": "APL385 Unicode",
-  "monoFontFamily": "Fira Code",
+  "monoFontFamily": "Lilex Nerd Font Mono",
   "fontWeight": 400,
   "fontScale": 1,
   "notepadUseMonospace": true,
