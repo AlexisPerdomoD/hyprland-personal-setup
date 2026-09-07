@@ -164,6 +164,11 @@
       "id": "builtin_vpn",
       "enabled": true,
       "width": 50
+    },
+    {
+      "id": "builtin_display_profiles",
+      "enabled": true,
+      "width": 50
     }
   ],
   "showWorkspaceIndex": false,

@@ -25,13 +25,7 @@ yay -S --needed --noconfirm hyprland \
     cava \
     matugen \
     dmenu
-# DEPRECADO
-# hyprpaper \
-# hyprshot \
-# python-pywal16 \
-# wf-recorder \
-# caelestia-shell-git
-#
+
 ########### FONTS ############
 sudo pacman -S --needed --noconfirm ttf-meslo-nerd \
     ttf-fantasque-nerd \
@@ -41,8 +35,7 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd \
     ttf-terminus-nerd \
     ttf-hack-nerd \
     ttf-monofur-nerd \
-    ttf-iosevka-nerd 
-
+    ttf-iosevka-nerd
 
 ########## LINKS ############
 # Wallpapers
