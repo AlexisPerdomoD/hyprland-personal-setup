@@ -1,7 +1,6 @@
 local main_mod = 'SUPER'
 
 -- DANK MATERIAL SHELL KEYBINDINGS --------------------------------------------
-
 hl.bind(main_mod .. ' + D', hl.dsp.exec_cmd 'dms ipc call launcher openWith all', { desc = 'Dock Menu' })
 hl.bind(main_mod .. ' + E', hl.dsp.exec_cmd 'dms ipc call launcher openWith files', { desc = 'Dock File Finder' })
 hl.bind(main_mod .. ' + SHIFT + D', hl.dsp.exec_cmd 'dms ipc call spotlight open', { desc = 'Floating Menu' })
@@ -53,10 +52,13 @@ hl.bind(main_mod .. ' + mouse_up', hl.dsp.focus { workspace = 'e-1' })
 -- MOVE/RESIZE WINDOWS WITH MAINMOD + LMB/RMB AND DRAGGING
 hl.bind(main_mod .. ' + mouse:272', hl.dsp.window.drag(), { mouse = true })
 hl.bind(main_mod .. ' + mouse:273', hl.dsp.window.resize(), { mouse = true })
+hl.bind(main_mod .. ' + ALT + H', hl.dsp.window.resize { x = -10, y = 0, relative = true }, { repeating = true })
+hl.bind(main_mod .. ' + ALT + J', hl.dsp.window.resize { x = 0, y = 10, relative = true }, { repeating = true })
+hl.bind(main_mod .. ' + ALT + K', hl.dsp.window.resize { x = 0, y = -10, relative = true }, { repeating = true })
+hl.bind(main_mod .. ' + ALT + L', hl.dsp.window.resize { x = 10, y = 0, relative = true }, { repeating = true })
 
 hl.bind(main_mod .. ' + page_up', hl.dsp.workspace.move { direction = 'up', monitor = 'e+1' })
 hl.bind(main_mod .. ' + page_down', hl.dsp.workspace.move { direction = 'down', monitor = 'e+1' })
-
 
 hl.bind(main_mod .. ' + XF86AudioRaiseVolume', hl.dsp.exec_cmd 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+')
 hl.bind(main_mod .. ' + XF86AudioLowerVolume', hl.dsp.exec_cmd 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-')
