@@ -45,7 +45,8 @@ hl.curve('resizeSmooth', { type = 'bezier', points = { { 0.16, 1 }, { 0.3, 1 } }
 
 hl.animation { leaf = 'windowsIn', enabled = true, speed = 2, bezier = 'appleIn' }
 hl.animation { leaf = 'windowsOut', enabled = true, speed = 2, bezier = 'appleOut' }
-hl.animation { leaf = 'windowsMove', enabled = true, speed = 2, bezier = 'quickSnap', style = 'slide' }
+-- hl.animation { leaf = 'windowsMove', enabled = true, speed = 6, bezier = 'quickSnap', style = 'slide' }
+hl.animation { leaf = 'windowsMove', enabled = true, speed = 6, bezier = 'appleMove', style = 'slide' }
 hl.animation { leaf = 'layersIn', enabled = true, speed = 2.5, bezier = 'smoothIn', style = 'slide' }
 hl.animation { leaf = 'layersOut', enabled = true, speed = 2, bezier = 'smoothOut', style = 'slide' }
 hl.animation { leaf = 'fadeLayers', enabled = true, speed = 2.5, bezier = 'smoothIn' }
@@ -55,10 +56,10 @@ hl.animation { leaf = 'fadeDim', enabled = true, speed = 3, bezier = 'smoothIn' 
 hl.animation {
     leaf = 'workspaces',
     enabled = true,
-    speed = 2,
+    speed = 4,
     bezier = 'workspace',
     direction = 'slidefade',
     factor = 0.25,
 }
-hl.animation { leaf = 'specialWorkspace', enabled = true, speed = 2, bezier = 'workspace', style = 'slidevert' }
-hl.animation { leaf = 'borderangle', enabled = true, speed = 100, bezier = 'borderFlow', loop = true }
+hl.animation { leaf = 'specialWorkspace', enabled = true, speed = 3, bezier = 'workspace', style = 'slidevert' }
+-- hl.animation { leaf = 'borderangle', enabled = true, speed = 4, bezier = 'borderFlow', loop = true }

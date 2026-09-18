@@ -164,15 +164,6 @@ hl.window_rule {
 }
 
 hl.window_rule {
-    name = 'float-and-resize-on-pic-in-picture',
-    match = { title = 'Picture-in-Picture' },
-    float = true,
-    size = '15% 15%',
-    move = '1.25% 4.5%',
-    pin = true,
-}
-
-hl.window_rule {
     name = 'float-and-resize-on-Save-File',
     match = { title = 'Save File' },
     float = true,
@@ -181,12 +172,13 @@ hl.window_rule {
 }
 
 hl.window_rule {
-    name = 'float-and-resize-on-foot-match:title-Picture(-| )in(-| )[Pp]icture',
-    match = { title = 'Picture(-| )in(-| )[Pp]icture' },
+    name = 'float-and-resize-on-pic-in-picture',
+    match = { title = '^[Pp]icture[- ]in[- ][Pp]icture$' },
     float = true,
-    size = '25% 40%',
+    move = { '(monitor_w - window_w - 12)', '12' },
     pin = true,
-    -- move
+    keep_aspect_ratio = true,
+    no_focus = true,
 }
 
 -- hl.window_rule {
