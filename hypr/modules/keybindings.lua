@@ -1,10 +1,12 @@
 local main_mod = 'SUPER'
 
 -- DANK MATERIAL SHELL KEYBINDINGS --------------------------------------------
-hl.bind(main_mod .. ' + D', hl.dsp.exec_cmd 'dms ipc call launcher openWith all', { desc = 'Dock Menu' })
+hl.bind(main_mod .. ' + D', hl.dsp.exec_cmd 'dms ipc call island open launcher', { desc = 'Dock Menu' })
 hl.bind(main_mod .. ' + E', hl.dsp.exec_cmd 'dms ipc call launcher openWith files', { desc = 'Dock File Finder' })
 hl.bind(main_mod .. ' + SHIFT + D', hl.dsp.exec_cmd 'dms ipc call spotlight open', { desc = 'Floating Menu' })
-hl.bind(main_mod .. ' + W', hl.dsp.exec_cmd 'dms ipc call powermenu toggle', { desc = 'Dock Power Menu' })
+hl.bind(main_mod .. ' + SHIFT + P', hl.dsp.exec_cmd 'dms ipc call powermenu toggle', { desc = 'Dock Power Menu' })
+hl.bind(main_mod .. ' + C', hl.dsp.exec_cmd 'dms ipc call island open control-center', { desc = 'Dock Control Center' })
+hl.bind(main_mod .. ' + W', hl.dsp.exec_cmd 'dms ipc call island open wallpaper', { desc = 'Dock Control Center' })
 
 -- KEYBINDINGS ----------------------------------------------------------------
 hl.bind('CTRL + SHIFT + T', hl.dsp.exec_cmd(TERM_CMD), { desc = 'Terminal' })
@@ -20,7 +22,7 @@ hl.bind(main_mod .. ' + P', hl.dsp.window.pin {}, { desc = 'Pin Window' })
 hl.bind(main_mod .. ' + A', hl.dsp.exec_cmd 'ani-cli --dmenu', { desc = 'Ani-cli' })
 
 hl.bind('CTRL + ALT + S', hl.dsp.exec_cmd(SCREEN_SHOT_CMD), { desc = 'Screenshot' })
-hl.bind('CTRL +ALT + SHIFT + R', hl.dsp.exec_cmd(SCREEN_RECORDER_CMD), { desc = 'Screen Recorder' })
+hl.bind('CTRL + ALT + SHIFT + R', hl.dsp.exec_cmd(SCREEN_RECORDER_CMD), { desc = 'Screen Recorder' })
 
 -- MOVEMENT -------------------------------------------------------------------
 hl.bind(main_mod .. ' + LEFT', hl.dsp.focus { direction = 'left' }, { desc = 'Focus Left' })
@@ -38,8 +40,8 @@ hl.bind(main_mod .. ' + P', hl.dsp.layout 'swapwithmaster', { desc = 'Swap with 
 -- SWITCH WORKSPACES WITH MAIN_MOD + [0-9]
 for i = 1, 10 do
     local k = i % 10
-    hl.bind(main_mod .. '+' .. k, hl.dsp.focus { workspace = i }, { desc = 'Switch to Workspace ' .. i })
-    hl.bind(main_mod .. '+SHIFT+' .. k, hl.dsp.window.move { workspace = i }, { desc = 'Move Window to Workspace ' .. i })
+    hl.bind(main_mod .. ' + ' .. k, hl.dsp.focus { workspace = i }, { desc = 'Switch to Workspace ' .. i })
+    hl.bind(main_mod .. ' + SHIFT + ' .. k, hl.dsp.window.move { workspace = i }, { desc = 'Move Window to Workspace ' .. i })
 end
 
 hl.bind(main_mod .. ' + S', hl.dsp.workspace.toggle_special 'magic')
