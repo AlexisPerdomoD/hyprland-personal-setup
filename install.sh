@@ -17,7 +17,6 @@ yay -S --needed --noconfirm hyprland \
     qt6ct \
     lxappearance \
     fastfetch \
-    btop \
     foot \
     neovide \
     dms-shell-bin \
@@ -60,14 +59,8 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd \
 [ "$(readlink "$HOME/.config/alacritty")" != "$REPO_PATH/alacritty" ] &&
     ln -sf "$REPO_PATH/alacritty" "$HOME/.config/alacritty"
 
-[ "$(readlink "$HOME/.config/firefox")" != "$REPO_PATH/firefox" ] &&
-    ln -sf "$REPO_PATH/firefox" "$HOME/.config/firefox"
-
 [ "$(readlink "$HOME/.config/Thunar")" != "$REPO_PATH/thunar" ] &&
     ln -sf "$REPO_PATH/thunar" "$HOME/.config/Thunar"
-
-[ "$(readlink "$HOME/.config/btop")" != "$REPO_PATH/btop" ] &&
-    ln -sf "$REPO_PATH/btop" "$HOME/.config/btop"
 
 [ "$(readlink "$HOME/.config/foot")" != "$REPO_PATH/foot" ] &&
     ln -sf "$REPO_PATH/foot" "$HOME/.config/foot"

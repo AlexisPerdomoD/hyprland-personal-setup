@@ -15,19 +15,17 @@ Static dotfiles repo managed via symlinks. No build system, no tests, no package
 | `hypr/`               | `~/.config/hypr`               | Main compositor config; entrypoint `hyprland.conf` |
 | `shell/`              | `~/.bashrc`, `~/.zshrc`        | Shell configs                                      |
 | `alacritty/`          | `~/.config/alacritty`          | Imports `dank-theme.toml`                          |
-| `btop/`               | `~/.config/btop`               | Themes dir is gitignored (generated)               |
 | `foot/`               | `~/.config/foot`               | Imports `dank-colors.ini`                          |
 | `thunar/`             | `~/.config/Thunar`             | File manager bindings                              |
-| `firefox/`            | `~/.config/firefox`            | Just `userChrome.css`                              |
 | `xdg-desktop-portal/` | `~/.config/xdg-desktop-portal` | Wayland portal config                              |
 | `DankMaterialShell/`  | `~/.config/DankMaterialShell`  | Active shell/panel system                          |
 | `Wallpapers/`         | `~/Documents/Wallpapers`       | Wallpaper image collection                         |
 
 ## Keypoints
 
-- **DankMaterialShell (DMS)** is the active panel/shell — replaces legacy `caelestia/`. Settings in `DankMaterialShell/settings.json`.
+- **DankMaterialShell (DMS)** is the active panel/shell system. Settings in `DankMaterialShell/settings.json`.
 - **`hypr/scheme/current.conf`** is **generated** (by matugen) and gitignored — sourced first by `hyprland.conf`. Agent must not edit it.
-- **`.gitignore`** covers generated color files: `hypr/scheme`, `btop/themes`, `mako/colors`, `wofi/colors.css`, `waybar/colors.css`, `.config/`.
+- **`.gitignore`** covers generated color files: `hypr/scheme`, `mako/colors`, `wofi/colors.css`, `waybar/colors.css`, `.config/`.
 - **`hyprland.conf`** sources: `scheme/current.conf`, `modules/*.conf`, `dms/*.conf`.
 - **Monitor:** DP-2 at 2560x1440@144Hz. Master layout, mfact 0.70.
 - **Terminal:** alacritty (primary), foot (secondary). Both use Nerd Fonts.
@@ -42,10 +40,12 @@ Static dotfiles repo managed via symlinks. No build system, no tests, no package
 
 ## Keybindings (notable)
 
-- `SUPER + D` — DMS dock launcher
-- `SUPER + SHIFT + D` — DMS floating launcher
+- `SUPER + D` — DMS island launcher
+- `SUPER + SHIFT + D` — DMS floating launcher (spotlight)
+- `SUPER + W` — DMS island wallpaper picker
+- `SUPER + C` — DMS island control center
+- `SUPER + SHIFT + P` — DMS power menu
 - `SUPER + hjkl` — focus Vim-style
-- `SUPER + W` — cycle wallpaper
 - `SUPER + S` — toggle scratchpad
 - `CTRL + SHIFT + T` — open terminal
 - `SUPER + Z` — neovide
