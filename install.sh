@@ -23,7 +23,8 @@ yay -S --needed --noconfirm hyprland \
     adw-gtk-theme \
     cava \
     matugen \
-    dmenu
+    dmenu \
+    playerctl
 
 ########### FONTS ############
 sudo pacman -S --needed --noconfirm ttf-meslo-nerd \

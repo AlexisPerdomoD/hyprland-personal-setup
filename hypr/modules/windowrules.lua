@@ -178,15 +178,21 @@ hl.window_rule {
     move = { '(monitor_w - window_w - 12)', '12' },
     pin = true,
     keep_aspect_ratio = true,
-    no_focus = true,
+    no_focus = false,
 }
 
--- hl.window_rule {
---     name = 'float-and-resize-on-Sign-In',
---     match = { title = 'Sign In|.*?' },
---     float = true,
---     size = '25% 40%',
--- }
+hl.window_rule {
+    name = 'float-and-resize-on-elige-archivos',
+    match = { title = 'Elige archivos' },
+    float = true,
+}
+
+hl.window_rule {
+    name = 'float-and-resize-on-xdg-desktop-portal-gtk',
+    match = { class = 'xdg-desktop-portal-gtk' },
+    keep_aspect_ratio = true,
+    float = true,
+}
 
 hl.window_rule {
     name = 'float-and-resize-on-Sign-In-match:title-Screenshot',
