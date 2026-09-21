@@ -76,8 +76,8 @@ hl.bind('XF86AudioPrev', hl.dsp.exec_cmd 'playerctl previous', { locked = true }
 
 hl.bind(main_mod .. ' + F2', hl.dsp.exec_cmd 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-', {repeating = true})
 hl.bind(main_mod .. ' + F3', hl.dsp.exec_cmd 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+', {repeating = true})
-hl.bind(main_mod .. ' + F5', hl.dsp.exec_cmd 'playerctl next', { locked = true })
-hl.bind(main_mod .. ' + F4', hl.dsp.exec_cmd 'playerctl play-pause', { locked = true })
-hl.bind(main_mod .. ' + F3', hl.dsp.exec_cmd 'playerctl previous', { locked = true })
+hl.bind(main_mod .. ' + F6', hl.dsp.exec_cmd 'playerctl next', { locked = true })
+hl.bind(main_mod .. ' + F5', hl.dsp.exec_cmd 'playerctl play-pause', { locked = true })
+hl.bind(main_mod .. ' + F4', hl.dsp.exec_cmd 'playerctl previous', { locked = true })
 hl.bind(main_mod .. ' + minus', hl.dsp.exec_cmd 'playerctl volume  0.1-', { locked = true })
 hl.bind(main_mod .. ' + equal', hl.dsp.exec_cmd 'playerctl volume  0.1+', { locked = true })
