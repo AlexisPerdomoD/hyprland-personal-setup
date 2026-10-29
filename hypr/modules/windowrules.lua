@@ -174,11 +174,11 @@ hl.window_rule {
 hl.window_rule {
     name = 'float-and-resize-on-pic-in-picture',
     match = { title = '^[Pp]icture[- ]in[- ][Pp]icture$' },
+
     float = true,
     move = { '(monitor_w - window_w - 12)', '12' },
     pin = true,
     keep_aspect_ratio = true,
-    no_focus = false,
 }
 
 hl.window_rule {

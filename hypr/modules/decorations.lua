@@ -17,7 +17,7 @@ hl.config {
             size = 10,
             passes = 5,
             contrast = 0.85,
-            vibrancy = 1.8,
+            vibrancy = 0.80,
             vibrancy_darkness = 0.15,
         },
         shadow = {
