@@ -142,7 +142,7 @@
       "cursorHideTimeout": 0
     }
   },
-  "fontFamily": "APL385 Unicode",
+  "fontFamily": "GoMono Nerd Font",
   "monoFontFamily": "Lilex Nerd Font Mono",
   "useSystemSoundTheme": true,
   "acMonitorTimeout": 900,
@@ -362,5 +362,14 @@
   ],
   "dmsWindowsFloatingSeeded": [
     "hyprland"
-  ]
+  ],
+  "currentThemeName": "dynamic",
+  "currentThemeCategory": "dynamic",
+  "matugenSpec": "2025",
+  "matugenScheme": "scheme-tonal-spot",
+  "matugenSourceMode": "colorful",
+  "wallpaperBackgroundColorMode": "surface",
+  "lockScreenWallpaperPath": "/home/perdomo/Documents/Wallpapers/wallhaven-mlo6my.jpg",
+  "controlCenterIconScale": 0.9,
+  "fontScale": 0.85
 }
