@@ -208,3 +208,12 @@ hl.window_rule {
     opacity = 0.0,
     no_anim = true,
 }
+
+--- TERMINAL EMULATOR RULES
+
+hl.window_rule {
+    name = 'alacritty-rules',
+    match = { class = 'Alacritty' },
+    opacity = 0.90,
+    no_blur= true,
+}

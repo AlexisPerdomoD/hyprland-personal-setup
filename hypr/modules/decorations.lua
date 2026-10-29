@@ -1,8 +1,8 @@
 hl.config {
     decoration = {
         rounding = 2,
-        active_opacity = 0.95,
-        inactive_opacity = 0.95,
+        active_opacity = 1,
+        inactive_opacity = 1,
         dim_inactive = true,
         dim_strength = 0.1,
         dim_special = 0.40,
@@ -18,7 +18,7 @@ hl.config {
             passes = 5,
             contrast = 0.85,
             vibrancy = 0.80,
-            vibrancy_darkness = 0.15,
+            vibrancy_darkness = 0.80,
         },
         shadow = {
             enabled = false,
