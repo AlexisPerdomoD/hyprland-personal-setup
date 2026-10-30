@@ -5,7 +5,7 @@ set -euo pipefail
 REPO_PATH="$(pwd)"
 
 ########## CORE ##############
-yay -S --needed --noconfirm hyprland \
+sudo pacman -S --needed --noconfirm hyprland \
     alacritty \
     gtk3 \
     gtk4 \
@@ -19,7 +19,7 @@ yay -S --needed --noconfirm hyprland \
     fastfetch \
     foot \
     neovide \
-    dms-shell-bin \
+    dux-shell \
     adw-gtk-theme \
     cava \
     matugen \
@@ -36,6 +36,8 @@ sudo pacman -S --needed --noconfirm ttf-meslo-nerd \
     ttf-hack-nerd \
     ttf-monofur-nerd \
     ttf-iosevka-nerd
+
+yay -S --needed --noconfirm hyprland bibata-cursor-theme
 
 ########## LINKS ############
 # Wallpapers
